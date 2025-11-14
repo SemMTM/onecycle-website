@@ -2,28 +2,33 @@
    HERO2 Component Styles
    ========================= */
 #hero2 {
-  background:
-    radial-gradient(60rem 60rem at 50% 40%, rgba(7,159,198,0.10), transparent 60%),
-    radial-gradient(30rem 30rem at 50% 40%, rgba(7,159,198,0.07), transparent 70%),
-    linear-gradient(180deg, var(--bgColour1), var(--bgColour2));
-  border-bottom: 1px solid var(--textColour2);
+  background:  
+  linear-gradient(
+      rgba(247, 248, 250, 0.9),
+      rgba(243, 243, 243, 0.9)
+    ),
+    url('/assets/images/water-ripple.webp') center center / cover no-repeat;
   color: var(--textColour1);
 }
 
 .hero2-inner {
   text-align: center;
   padding: var(--sectionPadding);
+  margin: 30px auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Title */
 .hero2-title {
   font-family: var(--headerFont);
   font-size: clamp(2.25rem, 5.5vw, 4rem);
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.01em;
-  max-width: 22ch;
-  margin: 0 auto var(--spaceSm);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  margin: 0 auto var(--spaceMd);
+  text-shadow: 0 3px 7px rgba(0,0,0,0.15);
+  font-weight: 300;
+  max-width: 850px;
 }
 
 .hero2-accent {
@@ -34,11 +39,12 @@
 /* Lead text */
 .hero2-lead {
   font-family: var(--bodyFont);
-  color: var(--textColour1);
+  color: var(--textColour2);
   margin: 0 auto var(--spaceSm);
-  max-width: 60ch;
+  font-weight: 400;
+  max-width: 750px;
   font-size: clamp(1.1rem, 1.3vw, 1.25rem);
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 /* Supporting text */
@@ -46,9 +52,9 @@
   font-family: var(--bodyFont);
   color: var(--textColour2);
   margin: 0 auto var(--spaceMd);
-  max-width: 70ch;
+  max-width: 550px;
   font-size: clamp(0.95rem, 1.1vw, 1.0625rem);
-  line-height: 1.7;
+  line-height: 1.5em;
 }
 
 /* Action buttons */
@@ -75,9 +81,6 @@
   box-shadow: 0 0 0 3px var(--mainBrandColour), 0 6px 16px rgba(0,0,0,.08);
 }
 
-/* =========================
-   Mobile (≤425px)
-   ========================= */
 @media (max-width: 425px) {
   #hero2 {
     background:
@@ -105,3 +108,350 @@
     max-width: 26rem;
   }
 }
+
+/* =========================
+   PROGRESS Component Styles
+   ========================= */
+#progress {
+  background: var(--bgColour1);
+  color: var(--textColour1);
+}
+
+.progress-inner {
+  text-align: center;
+}
+
+/* Header */
+.progress-header h2 {
+  font-family: var(--headerFont);
+  font-weight: 300;
+  margin-bottom: var(--spaceXs);
+}
+
+.progress-intro {
+  font-family: var(--bodyFont);
+  color: var(--textColour2);
+  max-width: 70ch;
+  margin: 0 auto var(--spaceLg);
+}
+.progress-intro .progress-brand { 
+  color: var(--mainBrandColour); 
+}
+
+/* Grid */
+.progress-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spaceSmMd);
+  margin: 0;
+  padding: 0;
+}
+
+/* Cards */
+.progress-card {
+  background: var(--bgColour3);
+  border-radius: 4px;
+  padding: var(--spaceSmMd);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.progress-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.progress-figure {
+  font-family: var(--headerFont);
+  color: var(--mainBrandColour);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: var(--spaceXs);
+  font-weight: 400;
+}
+
+.progress-copy {
+  font-family: var(--bodyFont);
+  color: var(--textColour2);
+  max-width: 36ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 425px) {
+  .progress-inner { padding: clamp(2.5rem, 6vw, 3rem) 1rem; }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spaceSm);
+  }
+}
+
+/* =========================
+   SOLUTIONS Component Styles
+   ========================= */
+#solutions {
+  position: relative;
+  background: var(--bgColour1);
+  color: var(--textColour1);
+  overflow: hidden;
+  background-color: var(--bgColour2);
+}
+
+.solutions-inner {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.solutions-header {
+  text-align: left;
+  padding-bottom: var(--spaceLg);
+}
+
+.solutions-header h2 {
+  font-weight: 300;
+  margin-bottom: var(--spaceSm);
+}
+
+.solutions-subheading {
+  font-size: 1.2rem;
+  font-family: var(--headerFont);
+}
+
+.solutions-intro {
+  color: var(--textColour2);
+  max-width: 70ch;
+}
+
+/* Background Circles */
+.solutions-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.solutions-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: bob 8s ease-in-out infinite;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  background: var(--mainBrandColour);
+  right: -120px;
+  top: 60px;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  background: var(--brandAccentColour);
+  right: 50px;
+  top: 240px;
+  animation-delay: 2s;
+}
+
+@keyframes bob {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+/* Grid */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spaceSmMd);
+  text-align: left;
+  margin-bottom: var(--spaceLg);
+}
+
+.solutions-card {
+  background: var(--bgColour3);
+  border-radius: 4px;
+  padding: var(--spaceSmMd);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.solutions-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.solutions-card h3 {
+  font-family: var(--headerFont);
+  font-weight: 400;
+  margin-bottom: var(--spaceSm);
+}
+
+.solutions-card p {
+  color: var(--textColour2);
+}
+
+/* Supporting capabilities */
+.solutions-support {
+  background: var(--bgColour3);
+  border-radius: 4px;
+  padding: var(--spaceSmMd);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  text-align: left;
+}
+
+.solutions-support h4 {
+  font-family: var(--headerFont);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--textColour1);
+  margin-bottom: var(--spaceSm);
+}
+
+.solutions-support ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spaceSm);
+}
+
+.solutions-support li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--bodyFont);
+  color: var(--textColour2);
+  font-size: 1rem;
+}
+
+.solutions-support li .icon-small {
+  flex: 0 0 20px;    
+  width: 20px;
+  height: 20px;
+  min-width: 20px;     
+  min-height: 20px;
+  aspect-ratio: 1 / 1;  
+  fill: var(--mainBrandColour);
+  overflow: visible;  
+}
+
+/* Responsive (≤425px) */
+@media (max-width: 425px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-support ul {
+    grid-template-columns: 1fr;
+  }
+
+  .circle1, .circle2 {
+    opacity: 0.2;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* =========================
+   PHILOSOPHY Component
+   ========================= */
+
+#philosophy {
+  position: relative;
+  background: var(--bgColour3);
+  color: var(--textColour1);
+  overflow: hidden;
+}
+
+.philosophy-inner {
+  position: relative;
+  padding: var(--sectionPadding);
+  max-width: var(--maxW);
+}
+
+/* Headings / text (fonts/line-height handled globally) */
+.philosophy-kicker {
+  color: var(--brandAccentColour);
+  margin-bottom: var(--spaceXs);
+  font-size: 0.95rem;
+}
+
+#philosophy h2 {
+  font-weight: 300;
+  margin-bottom: var(--spaceSm);
+}
+
+.accent-red { color: var(--brandAccentColour); }
+
+.philosophy-copy {
+  color: var(--textColour2);
+  max-width: 70ch;
+  margin: 0 0 var(--spaceSm);
+}
+
+.philosophy-tagline {
+  margin-top: var(--spaceSm);
+  font-weight: 400;
+}
+
+/* Background circles (reuse bobbing animation) */
+.philosophy-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.philosophy-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: bob 8s ease-in-out infinite;
+}
+
+/* Large aqua disk half off the left edge */
+.circle-left-1 {
+  width: 420px;
+  height: 420px;
+  left: -220px;      /* off-canvas to match screenshot */
+  top: 20px;
+  background: var(--mainBrandColour);
+  animation-delay: 0s;
+}
+
+/* Smaller red disk overlapping */
+.circle-left-2 {
+  width: 220px;
+  height: 220px;
+  left: -60px;
+  top: 180px;
+  background: var(--brandAccentColour);
+  opacity: 0.35;
+  animation-delay: 2s;
+}
+
+/* Layer content above shapes */
+#philosophy .container { position: relative; z-index: 1; }
+
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .philosophy-inner { padding: clamp(2.5rem, 6vw, 3rem) 1rem; }
+
+  .circle-left-1 { width: 280px; height: 280px; left: -160px; top: 0; }
+  .circle-left-2 { width: 150px; height: 150px; left: -40px;  top: 140px; }
+
+  .philosophy-copy { margin-bottom: var(--spaceXs); }
+}
+

@@ -4,7 +4,7 @@
   --spaceSmMd: clamp(1.75rem, 2.5vw, 2.1875rem); /* 28–35px range */
   --spaceMd: clamp(2.5rem, 3.5vw, 3.125rem);   /* 40–50px range */
   --spaceLg: clamp(3.5rem, 4.5vw, 4.0625rem);  /* 56–65px range */
-  --mainBrandColour: #079FC6;
+  --mainBrandColour: #33C7E6;
   --brandAccentColour: #C42424;
   --bgColour1: #F7F8FA;
   --bgColour2: #F3F3F3; 
