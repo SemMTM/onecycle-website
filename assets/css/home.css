@@ -445,11 +445,20 @@
 
 /* Mobile ≤425px */
 @media (max-width: 425px) {
-  .philosophy-inner { padding: clamp(2.5rem, 6vw, 3rem) 1rem; }
+  .philosophy-inner { 
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem; 
+  }
 
-  .circle-left-1 { width: 280px; height: 280px; left: -160px; top: 0; }
-  .circle-left-2 { width: 150px; height: 150px; left: -40px;  top: 140px; }
+  .circle-left-1 { 
+    width: 280px; height: 280px; left: -160px; top: 0; 
+  }
+  
+  .circle-left-2 { 
+    width: 150px; height: 150px; left: -40px;  top: 140px; 
+  }
 
-  .philosophy-copy { margin-bottom: var(--spaceXs); }
+  .philosophy-copy { 
+    margin-bottom: var(--spaceXs); 
+  }
 }
 
