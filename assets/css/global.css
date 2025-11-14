@@ -1,11 +1,47 @@
 /* Fonts */
-/* poppins-regular - latin */
 @font-face {
   font-display: swap; 
-  font-family: 'Poppins'; /* Desired font name */
+  font-family: 'Exo2';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/poppins-v23-latin-regular.woff2') format('woff2'); 
+  src: url('/assets/fonts/Exo2-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Exo2-Regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Exo2';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/Exo2-Light.woff2') format('woff2'),
+       url('/assets/fonts/Exo2-Light.woff') format('woff'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Lato-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Lato-Regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/Lato-Light.woff2') format('woff2'),
+       url('/assets/fonts/Lato-Light.woff') format('woff'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Neuropol-X';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Neuropol-X-Rg.woff2') format('woff2'),
+       url('/assets/fonts/Neuropol-X-Rg.woff') format('woff'); 
 }
 
 /* visible-only-on-focus skip link */
@@ -70,6 +106,7 @@ body, html {
   overflow-x: hidden;
   padding: 0;
   font-family: var(--bodyFont);
+  font-weight: 300;
   color: var(--textColour1);
   scroll-behavior: smooth;
   background-color: var(--bgColour1);
@@ -90,7 +127,7 @@ section {
 
 h1, h2 {
   font-family: var(--headerFont);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h1 {
@@ -151,13 +188,6 @@ h3 {
 
 /* Button Styles */
 /* Button CSS */
-.main-btn {
-  background-color: var(--mainBrandColour);
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 .sub-btn {
   background-color: rgb(230, 230, 230);
   border: 1px solid var(--mainBrandColour);
@@ -168,70 +198,17 @@ h3 {
 .cta-button {
   padding: 0.75rem 1.5rem;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   display: inline-block;
   transition: all 0.3s;
   font-family: var(--headerFont);
   position: relative;
-}
-
-/* Animations */
-
-/* Sweep To Top */
-.sweep-to-top {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  transition-property: color;
-  transition-property: color;
-  transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.sweep-to-top:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #6fd1ff;
-  transform: scaleY(0);
-  transform: scaleY(0);
-  transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  transition-property: transform;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.sweep-to-top:hover, .sweep-to-top:focus, .sweep-to-top:active {
+  background-color: var(--mainBrandColour);
+  border: none;
   color: white;
-}
-.sweep-to-top:hover:before, .sweep-to-top:focus:before, .sweep-to-top:active:before {
-  transform: scaleY(1);
-  transform: scaleY(1);
-}
-
-/* Hover up */
-.hover-up {
-  transition: box-shadow 0.3s;
-  transition: 
-    transform 0.3s ease, 
-    box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-.hover-up:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 /* ==== Nav1 Component Styles Start ==== */
@@ -243,9 +220,9 @@ h3 {
   transform: translateX(-50%);
   width: 100%;
   background: var(--bgColour2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 0.4rem;
+  padding: 0.6rem 0.8rem;
 }
 
 .nav1-container {
@@ -254,19 +231,25 @@ h3 {
   justify-content: space-between;
 }
 
+.nav1-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .nav1-ul li a {
   font-family: var(--headerFont);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--textColour1);
   text-decoration: none;
 }
 
 .nav1-logo {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--textColour1);
+  font-weight: 400;
+  color: var(--mainBrandColour);
   text-decoration: none;
-  font-family: var(--headerFont);
+  font-family: var(--logoFont);
   display: flex;
   align-items: center;
 }
@@ -445,14 +428,13 @@ h3 {
     background-color: var(--bgColour2);
     transform: scaleY(0);
     transform-origin: top;
-    transition: opacity .3s transform .4s;
+    transition: opacity .3s, transform .4s;
     overflow: hidden;
     position: absolute;
     box-sizing: border-box;
     padding-bottom: 1rem;
     left: 0;
     top: 58px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   }
 
   .nav1-ul {
@@ -481,10 +463,7 @@ h3 {
   }
 
   .nav1-ul-wrapper .header-btn .cta-button {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 /* ==== Nav1 Component Styles End ==== */
@@ -604,3 +583,62 @@ footer a {
 }
 /* footer1 Component Styles End */
 /* footer1 Component Styles End */
+
+/* Animations */
+/* Animations */
+
+/* Sweep To Top */
+.sweep-to-top {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.sweep-to-top:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #6fd1ff;
+  transform: scaleY(0);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  transition-property: transform;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.sweep-to-top:hover, .sweep-to-top:focus, .sweep-to-top:active {
+  color: white;
+}
+.sweep-to-top:hover:before, .sweep-to-top:focus:before, .sweep-to-top:active:before {
+  transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+/* Hover up */
+.hover-up {
+  transition: box-shadow 0.3s;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.hover-up:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}

@@ -1,3 +1,107 @@
-main {
-  height: 700px;
+/* =========================
+   HERO2 Component Styles
+   ========================= */
+#hero2 {
+  background:
+    radial-gradient(60rem 60rem at 50% 40%, rgba(7,159,198,0.10), transparent 60%),
+    radial-gradient(30rem 30rem at 50% 40%, rgba(7,159,198,0.07), transparent 70%),
+    linear-gradient(180deg, var(--bgColour1), var(--bgColour2));
+  border-bottom: 1px solid var(--textColour2);
+  color: var(--textColour1);
+}
+
+.hero2-inner {
+  text-align: center;
+  padding: var(--sectionPadding);
+}
+
+/* Title */
+.hero2-title {
+  font-family: var(--headerFont);
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  max-width: 22ch;
+  margin: 0 auto var(--spaceSm);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+.hero2-accent {
+  display: block;
+  color: var(--mainBrandColour);
+}
+
+/* Lead text */
+.hero2-lead {
+  font-family: var(--bodyFont);
+  color: var(--textColour1);
+  margin: 0 auto var(--spaceSm);
+  max-width: 60ch;
+  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+  line-height: 1.5;
+}
+
+/* Supporting text */
+.hero2-sub {
+  font-family: var(--bodyFont);
+  color: var(--textColour2);
+  margin: 0 auto var(--spaceMd);
+  max-width: 70ch;
+  font-size: clamp(0.95rem, 1.1vw, 1.0625rem);
+  line-height: 1.7;
+}
+
+/* Action buttons */
+.hero2-actions {
+  display: inline-flex;
+  gap: var(--spaceSm);
+  align-items: center;
+  justify-content: center;
+}
+
+.hero2-cta,
+.hero2-cta-alt {
+  min-height: 3rem;
+  padding-inline: 1.25rem;
+  border-radius: 10px;
+  font-family: var(--bodyFont);
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+
+.hero2-cta:focus-visible,
+.hero2-cta-alt:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--mainBrandColour), 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* =========================
+   Mobile (≤425px)
+   ========================= */
+@media (max-width: 425px) {
+  #hero2 {
+    background:
+      radial-gradient(32rem 32rem at 50% 35%, rgba(7,159,198,0.10), transparent 60%),
+      linear-gradient(180deg, var(--bgColour1), var(--bgColour2));
+  }
+
+  .hero2-inner {
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
+  }
+
+  .hero2-title {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .hero2-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spaceXs);
+  }
+
+  .hero2-cta,
+  .hero2-cta-alt {
+    width: 100%;
+    max-width: 26rem;
+  }
 }

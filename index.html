@@ -4,7 +4,7 @@
   <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark light"> <!-- Set depending on which they have -->
+  <meta name="color-scheme" content="light"> <!-- Set depending on which they have -->
 
   <!-- Primary SEO -->
   <title>Page Title</title>
@@ -29,13 +29,13 @@
   <link rel="stylesheet" href="/assets/css/home.css">
 
   <!-- Fonts -->
-  <link href="/assets/fonts/inter-v19-latin-300.woff2" rel="preload" as="font" 
+  <link href="/assets/fonts/Exo2-Light.woff2" rel="preload" as="font" 
   crossorigin type="font/woff2">
-  <link href="/assets/fonts/poppins-v23-latin-600.woff2" rel="preload" as="font" 
+  <link href="/assets/fonts/Exo2-Regular.woff2" rel="preload" as="font" 
   crossorigin type="font/woff2">
-  <link href="/assets/fonts/poppins-v23-latin-700.woff2" rel="preload" as="font" 
+  <link href="/assets/fonts/Lato-Light.woff2" rel="preload" as="font" 
   crossorigin type="font/woff2">
-  <link href="/assets/fonts/poppins-v23-latin-800.woff2" rel="preload" as="font" 
+  <link href="/assets/fonts/Lato-Regular.woff2" rel="preload" as="font" 
   crossorigin type="font/woff2">
 
   <!-- Other head and Json data under here -->
@@ -49,46 +49,50 @@
 
   <!-- Header -->
   <header id="nav1-navigation">
-    <div class="nav1-container">
+    <div class="nav1-container container">
       <!-- Logo -->
       <a href="/" class="nav1-logo">
         <span class="visually-hidden">Homepage title for screen readers</span>
-        Company Logo
+        OneCycle
       </a>
 
       <!-- Nav Menu -->
-      <nav class="nav1-nav" role="navigation" aria-label="Primary">
-        <!-- Toggle Button -->
-        <button 
-          class="nav1-toggle" 
-          aria-label="Toggle Navigation"
-          aria-controls="nav-menu"
-          aria-expanded="false"
+      <div class="nav1-inner">
+        <nav class="nav1-nav" role="navigation" aria-label="Primary">
+          <!-- Toggle Button -->
+          <button 
+            class="nav1-toggle" 
+            aria-label="Toggle Navigation"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            >
+            <div class="nav1-toggle-box">
+              <span class="nav1-line" aria-hidden="true"></span>
+              <span class="nav1-line" aria-hidden="true"></span>
+              <span class="nav1-line" aria-hidden="true"></span>
+            </div>
+          </button>
+
+          <div class="nav1-ul-wrapper" id="nav-menu">
+            <ul class="nav1-ul">
+              <!-- Home -->
+              <li><a href="/" class="active" aria-current="page">Home</a></li>
+              <li><a href="/">Our Solutions</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">Contact</a></li>
+            </ul>
+            <div class="header-btn">
+              <a href="/contact-us/" class="cta-button" aria-label="Get Started - go to Contact Page">Get in Touch</a>
+            </div>
+          </div>
+        </nav>
+
+        <div 
+          class="header-btn"
+          style="margin-left: 3rem;"
           >
-          <div class="nav1-toggle-box">
-            <span class="nav1-line" aria-hidden="true"></span>
-            <span class="nav1-line" aria-hidden="true"></span>
-            <span class="nav1-line" aria-hidden="true"></span>
-          </div>
-        </button>
-
-        <div class="nav1-ul-wrapper" id="nav-menu">
-          <ul class="nav1-ul">
-            <!-- Home -->
-            <li><a href="/" class="active" aria-current="page">Home</a></li>
-            <li><a href="/portfolio/">About</a></li>
-            <li><a href="/portfolio/">Services</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
-            <li><a href="/contact-us/">Contact</a></li>
-          </ul>
-          <div class="header-btn">
-            <a href="/contact-us/" class="nav1-cta-button" aria-label="Get Started - go to Contact Page">Get Started</a>
-          </div>
+          <a href="/contact-us/" class="cta-button sweep-to-top" aria-label="Get Started - go to Contact Page">Get in Touch</a>
         </div>
-      </nav>
-
-      <div class="header-btn">
-        <a href="/contact-us/" class="nav1-cta-button sweep-to-top" aria-label="Get Started - go to Contact Page">Get Started</a>
       </div>
     </div>
   </header>
@@ -99,7 +103,28 @@
 
   <!-- Main Content -->
   <main id="main-content" role="main" tabindex="-1">
+    <!-- HERO2 -->
+    <section id="hero2" class="section" aria-labelledby="hero2-title">
+      <div class="container hero2-inner">
+        <h1 id="hero2-title" class="hero2-title">
+          Turning Hazardous Materials
+          <span class="hero2-accent">into Valuable Resources</span>
+        </h1>
 
+        <p class="hero2-lead">
+          Science-driven recovery and refining technologies that transform industrial by-products into sustainable value.
+        </p>
+
+        <p class="hero2-sub">
+          OneCycle develops advanced processes that convert hazardous waste into reusable materials — protecting the environment through precision, responsibility, and innovation.
+        </p>
+
+        <div class="hero2-actions" role="group" aria-label="Primary actions">
+          <a href="#solutions" class="cta-button">Learn About our Solutions</a>
+          <a href="#contact" class="cta-button sub-btn">Discuss a Collaboration</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- footer1 Components Start -->
@@ -119,12 +144,10 @@
         <div class="footer1-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href="/pricing/">Pricing</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Our Solutions</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
         </div>
 
