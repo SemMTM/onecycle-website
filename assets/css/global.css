@@ -210,7 +210,7 @@ h3 {
 .sub-btn {
   box-sizing: border-box;
   background-color: rgba(230, 230, 230, 0);
-  border: 2px solid #5A5A5A;
+  border: 1px solid #5A5A5A;
   color: var(--mainBrandColour);
   font-weight: 400;
   color: #5A5A5A;
@@ -507,7 +507,6 @@ h3 {
   gap: var(--spaceXs);
   place-items: center;
   color: var(--textColour2);
-  font-size: 0.95rem;
 }
 
 .collab-cta-email {
@@ -652,6 +651,7 @@ h3 {
   text-decoration: none;
   color: var(--textColour2);
   transition: color 0.3s;
+  font-size: 0.9rem;
 }
 
 .footer1-legal a:hover {
@@ -728,6 +728,7 @@ h3 {
   content: "";
   position: absolute;
   z-index: -1;
+  border-radius: 4px;
   top: 0;
   left: 0;
   right: 0;
@@ -752,16 +753,21 @@ h3 {
   transform: scaleY(1);
 }
 
-/* Hover up */
-.hover-up {
-  transition: box-shadow 0.3s;
-  transition: 
-    transform 0.3s ease, 
-    box-shadow 0.3s ease;
-  will-change: transform;
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out,
+    box-shadow 0.3s;
 }
 
-.hover-up:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out,
+    box-shadow 0.3s;
 }

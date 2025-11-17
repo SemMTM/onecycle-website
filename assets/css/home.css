@@ -509,12 +509,12 @@
   box-shadow: 0 6px 18px rgba(0,0,0,.22);
   color: #ffffff;
   overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: default;
 }
 
 .impact-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.30);
+  box-shadow: 0 10px 22px rgba(0,0,0,.50);
 }
 
 /* Card variants (gradients use brand tokens) */
