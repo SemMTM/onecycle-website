@@ -1,0 +1,212 @@
+/* =========================
+   CONTACT Component
+   ========================= */
+
+#contact {
+  position: relative;
+  background: var(--bgColour3);
+  color: var(--textColour1);
+  overflow: hidden;
+}
+
+.contact-inner {
+  position: relative;
+  max-width: 1050px;
+}
+
+/* Layout */
+.contact-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 2.1fr);
+  gap: var(--spaceSmMd);
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Background circles bottom-left */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-circle {
+  position: absolute;
+  border-radius: 50%;
+  animation: bob 10s ease-in-out infinite;
+}
+
+/* Large aqua circle */
+.contact-circle1 {
+  width: 340px;
+  height: 340px;
+  left: -170px;
+  bottom: -60px;
+  background: var(--mainBrandColour);
+  opacity: 0.20;
+}
+
+/* Smaller red circle */
+.contact-circle2 {
+  width: 210px;
+  height: 210px;
+  left: -40px;
+  bottom: -10px;
+  background: var(--brandAccentColour);
+  opacity: 0.32;
+  animation-delay: 2s;
+}
+
+/* Ensure content sits above circles */
+.contact-layout,
+.contact-info,
+.contact-form-panel {
+  position: relative;
+  z-index: 1;
+}
+
+/* Left: email card */
+.contact-info-card {
+  background: var(--bgColour2);
+  border-radius: 4px;
+  padding: var(--spaceSm);
+  max-width: 220px;
+}
+
+.contact-info-icon-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--spaceSm);
+}
+
+.contact-info-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(7,159,198,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info-icon-circle svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--mainBrandColour);
+}
+
+.contact-info-label {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.contact-info-email {
+  color: var(--textColour1);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.contact-info-email:hover {
+  color: var(--mainBrandColour);
+}
+
+/* Right: form panel */
+.contact-form-panel {
+  background: var(--bgColour2);
+  border-radius: 4px;
+  padding: var(--spaceSmMd);
+}
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaceSm);
+}
+
+.contact-row--two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spaceSm);
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-form-group label {
+  font-size: 0.85rem;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fdfdfd;
+}
+
+.contact-form-group input:focus-visible,
+.contact-form-group textarea:focus-visible {
+  outline: 2px solid var(--mainBrandColour);
+  outline-offset: 1px;
+}
+
+/* Submit + privacy */
+.contact-actions {
+  margin-top: var(--spaceSm);
+}
+
+.contact-submit {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.contact-privacy {
+  margin-top: var(--spaceSm);
+  font-size: 0.8rem;
+  color: var(--textColour2);
+}
+
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .contact-inner {
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spaceSmMd);
+  }
+
+  .contact-info-card {
+    max-width: 100%;
+  }
+
+  .contact-form-panel {
+    padding: var(--spaceSm);
+  }
+
+  .contact-circle1 {
+    width: 260px;
+    height: 260px;
+    left: -140px;
+    bottom: -40px;
+  }
+
+  .contact-circle2 {
+    width: 170px;
+    height: 170px;
+    left: -30px;
+    bottom: -5px;
+  }
+
+  .contact-row--two {
+    grid-template-columns: 1fr;
+  }
+}
