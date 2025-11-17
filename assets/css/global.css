@@ -532,7 +532,7 @@ h3 {
    ========================= */
 .internal-hero {
   position: relative;
-  background: var(--bgColour3);
+  background: var(--bgColour1);
   color: var(--textColour1);
   overflow: hidden;
 }
@@ -844,6 +844,7 @@ h3 {
   opacity: 0;
   transform: translateY(24px);
   will-change: opacity, transform;
+  transition-delay: 0.3s;
   transition:
     opacity 0.7s ease-out,
     transform 0.7s ease-out,

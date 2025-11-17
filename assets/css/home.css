@@ -450,11 +450,11 @@
 }
 
 /* Mobile ≤425px */
-@media (max-width: 425px) {
-  .circle-left-2 {
-  width: 110px;
-  height: 110px;
-}
+  @media (max-width: 425px) {
+    .circle-left-2 {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 /* =========================
