@@ -208,6 +208,7 @@ h3 {
 }
 
 .sub-btn {
+  box-sizing: border-box;
   background-color: rgba(230, 230, 230, 0);
   border: 2px solid #5A5A5A;
   color: var(--mainBrandColour);
@@ -627,6 +628,7 @@ h3 {
   background: var(--brandAccentColour);
   border: none;
   opacity: 0.35;
+  margin: 1.2rem 0;
 }
 
 /* Bottom Row */
@@ -667,21 +669,40 @@ h3 {
   transition: color 0.3s;
 }
 
-/* --- Mobile (≤425px) --- */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .footer1-top {
-    grid-template-columns: 1fr;
-    text-align: center;
-    place-items: center;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: none;
   }
 
   .footer1-nav ul {
     justify-content: center;
   }
 
+  .footer1-contact {
+    justify-content: center;
+  }
+
+  #footer1 .nav1-logo {
+    justify-content: center;
+  }
+
+  .footer1-brand {
+    place-items: center;
+  }
+
+  .footer1-tagline {
+    text-align: center;
+    max-width: none;
+  }
+
   .footer1-bottom {
     flex-direction: column;
-    gap: var(--spaceXs);
+    gap: 1rem;
+  }
+
+  .footer1-copy {
+    text-align: center;
   }
 }
 
