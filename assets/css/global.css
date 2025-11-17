@@ -417,7 +417,6 @@ h3 {
     flex-direction: row;
     gap: 1.5rem;
     padding: 0;
-    font-size: 0.9rem;
   }
 
   .header-btn {
@@ -473,115 +472,219 @@ h3 {
 /* ==== Nav1 Component Styles End ==== */
 /* ==== Nav1 Component Styles End ==== */
 
-/* footer1.css */
-/* footer1 Component Styles Start */
-/* footer1 Component Styles Start */
-#site-footer {
+/* ==== Collab CTA Component Styles Start ==== */
+#collab-cta {
+  background: var(--bgColour1);
   color: var(--textColour1);
-  padding: 2.5rem 1rem;
-  border-top: 1px solid #1a1a1a;
-  border-radius: 0 0 10px 10px;
-  max-width: 1050px;
-  margin: 0 auto;
+  text-align: center;
 }
 
-.footer1-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+.collab-cta-inner {
+  padding: var(--spaceSm) 0;
 }
 
-.footer1-description {
-  font-size: 0.9rem;
+/* Heading + intro */
+#collab-cta h2 {
+  font-weight: 300;
+  margin-bottom: var(--spaceSm);
+}
+
+.collab-cta-intro {
+  color: var(--textColour2);
+  max-width: 70ch;
+  margin: 0 auto var(--spaceMd);
+}
+
+/* CTA button */
+.collab-cta-actions {
+  margin-bottom: var(--spaceLg);
+}
+
+/* Meta (email + location) */
+.collab-cta-meta {
+  display: grid;
+  gap: var(--spaceXs);
+  place-items: center;
+  color: var(--textColour2);
+  font-size: 0.95rem;
+}
+
+.collab-cta-email {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.collab-cta-email a {
   color: var(--textColour1);
-  margin-bottom: 2rem;
-  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Columns */
-.footer1-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.footer1-columns h3 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.collab-cta-email a:hover {
   color: var(--mainBrandColour);
+  transition: color 0.3s;
 }
 
-.footer1-links ul,
-.footer1-contact ul {
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .collab-cta-inner { 
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem; 
+  }
+
+  .collab-cta-actions .cta-button { 
+    width: 100%; max-width: 26rem; 
+  }
+}
+
+
+/* =========================
+   FOOTER Component
+   ========================= */
+
+#footer1 {
+  background: var(--bgColour1);
+  padding: var(--sectionPadding);
+}
+
+.footer1-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaceSm);
+}
+
+/* --- Top Row Layout --- */
+.footer1-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--spaceSmMd);
+}
+
+/* Brand */
+.footer1-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-bottom: var(--spaceXs);
+}
+
+.footer1-tagline {
+  max-width: 32ch;
+  color: var(--textColour2);
+}
+
+/* Nav */
+.footer1-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.footer1-links li,
-.footer1-contact li {
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
-  color: var(--textColour1);
   display: flex;
-  gap: .5rem;
+  gap: var(--spaceSm);
+  justify-content: center;
+}
+
+.footer1-nav a {
+  text-decoration: none;
+  color: var(--textColour2);
+  transition: color 0.3s;
+}
+
+.footer1-nav a:hover {
+  color: var(--mainBrandColour);
+}
+
+/* Contact */
+.footer1-contact {
+  display: flex;
   align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  justify-content: end;
 }
 
-.footer1-contact .icon {
-  height: 20px;
-  width: 20px;
-}
-
-.footer1-socials .icon:hover {
-  fill: #6fddff;
-  transition: fill 0.5s;
-}
-
-footer a {
+.footer1-contact a {
   color: var(--textColour1);
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color 0.3s;
 }
 
-.footer1-links a:hover {
+.footer1-contact a:hover {
   color: var(--mainBrandColour);
+}
+
+.footer1-email-icon {
+  fill: var(--mainBrandColour);
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+/* Divider */
+.footer1-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--brandAccentColour);
+  border: none;
+  opacity: 0.35;
 }
 
 /* Bottom Row */
 .footer1-bottom {
-  border-top: 1px solid #333;
-  padding-top: 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .footer1-copy {
-  font-size: 0.75rem;
-  color: var(--textColour1);
+  color: var(--textColour2);
+  font-size: 0.9rem;
 }
 
-.footer1-socials a {
-  margin-left: 1rem;
-  font-size: 1rem;
+.footer1-legal {
+  display: flex;
+  gap: var(--spaceSm);
+}
+
+.footer1-legal a {
+  text-decoration: none;
+  color: var(--textColour2);
   transition: color 0.3s;
 }
 
-.footer1-socials a:first-child {
-  margin-left: 0;
-}
-
-.footer1-socials a:hover {
+.footer1-legal a:hover {
   color: var(--mainBrandColour);
+}
+
+.built-by-link {
+  text-decoration: none;
+  color: var(--textColour2);
   transition: color 0.3s;
 }
-/* footer1 Component Styles End */
-/* footer1 Component Styles End */
+
+.built-by-link:hover {
+  color: var(--brandAccentColour);
+  transition: color 0.3s;
+}
+
+/* --- Mobile (≤425px) --- */
+@media (max-width: 425px) {
+  .footer1-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+  }
+
+  .footer1-nav ul {
+    justify-content: center;
+  }
+
+  .footer1-bottom {
+    flex-direction: column;
+    gap: var(--spaceXs);
+  }
+}
+
 
 /* Animations */
 /* Animations */

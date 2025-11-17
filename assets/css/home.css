@@ -462,3 +462,112 @@
   }
 }
 
+/* =========================
+   IMPACT Component Styles
+   ========================= */
+
+#impact { 
+  background: var(--bgColour1); 
+  color: var(--textColour1); 
+}
+
+.accent-red { 
+  color: var(--brandAccentColour); 
+}
+
+/* Header */
+.impact-header h2 { 
+  font-weight: 300; 
+  margin-bottom: var(--spaceSm); 
+}
+
+.impact-intro {
+  color: var(--textColour2);
+  max-width: 70ch;
+  margin: 0 0 var(--spaceLg);
+}
+
+/* Grid */
+.impact-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spaceSmMd);
+  margin: 0;
+  padding: 0;
+}
+
+/* Cards base */
+.impact-card {
+  position: relative;
+  border-radius: 4px;
+  padding: var(--spaceSmMd);
+  box-shadow: 0 6px 18px rgba(0,0,0,.22);
+  color: #ffffff;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.30);
+}
+
+/* Card variants (gradients use brand tokens) */
+.card-blue {
+  background:
+    linear-gradient(145deg,
+      color-mix(in srgb, var(--mainBrandColour) 88%, #ffffff 12%),
+      color-mix(in srgb, var(--mainBrandColour) 60%, #0b3954 40%)
+    );
+}
+
+.card-slate {
+  background: linear-gradient(145deg, #4B5563, #374151);
+}
+
+.card-red {
+  background:
+    linear-gradient(145deg,
+      color-mix(in srgb, var(--brandAccentColour) 88%, #ffffff 12%),
+      color-mix(in srgb, var(--brandAccentColour) 60%, #7a0e0e 40%)
+    );
+}
+
+/* Icon tile (used on slate/red cards) */
+.impact-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.18);
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--spaceSm);
+}
+
+.impact-card-icon svg {
+  width: 22px; height: 22px; fill: #fff;
+}
+
+.impact-card-figure {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 400;
+  margin-bottom: var(--spaceXs);
+}
+
+.impact-card-title {
+  font-weight: 400;
+  margin-bottom: var(--spaceXs);
+}
+
+.impact-card-desc {
+  color: rgba(255, 255, 255, 0.808);
+}
+
+/* Responsive ≤425px */
+@media (max-width: 425px) {
+  .impact-inner { padding: clamp(2.5rem, 6vw, 3rem) 1rem; }
+  .impact-grid { grid-template-columns: 1fr; }
+}
+
+
