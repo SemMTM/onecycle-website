@@ -110,16 +110,11 @@
 }
 
 /* Mobile ≤425px */
-@media (max-width: 425px) {
-  .capabilities-inner {
-    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
-  }
-
-  .capabilities-card {
-    padding: var(--spaceSm);
+@media (max-width: 768px) {
+  .capabilities-card-header {
+    flex-direction: column;
   }
 }
-
 
 /* =========================
    SUPPORTING SERVICES Component
@@ -199,15 +194,7 @@
 
 /* Mobile ≤425px */
 @media (max-width: 425px) {
-  .support-inner {
-    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
-  }
-
   .support-grid {
     grid-template-columns: 1fr;
-  }
-
-  .support-card {
-    padding: var(--spaceSm);
   }
 }
