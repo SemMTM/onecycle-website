@@ -269,15 +269,6 @@
   animation-delay: 2s;
 }
 
-@keyframes bob {
-  0%, 100% { 
-    transform: translateY(0); 
-  }
-  50% { 
-    transform: translateY(-20px); 
-  }
-}
-
 /* Grid */
 .solutions-grid {
   display: grid;

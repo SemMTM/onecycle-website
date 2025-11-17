@@ -127,11 +127,11 @@ p {
 
 h1, h2 {
   font-family: var(--headerFont);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1 {
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  font-size: clamp(2.9rem, 5.4vw, 3.8rem);
 }
 
 h2 {
@@ -140,6 +140,7 @@ h2 {
 
 h3 {
   font-size: clamp(1.1rem, 1.8vw, 1.2rem);
+  font-family: var(--headerFont);
 }
 
 .brand-accent-blue {
@@ -362,7 +363,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4); 
+  background: rgba(0, 0, 0, 0.15); 
   opacity: 0;
   visibility: hidden;
   transition:
@@ -537,6 +538,109 @@ h3 {
   }
 }
 
+/* =========================
+   INTERNAL HERO STYLES 
+   ========================= */
+.internal-hero {
+  position: relative;
+  background: var(--bgColour3);
+  color: var(--textColour1);
+  overflow: hidden;
+}
+
+.internal-hero-inner {
+  position: relative;
+  padding: var(--sectionPadding);
+  max-width: 950px;
+}
+
+/* Title + text */
+.internal-hero-title {
+  margin-bottom: var(--spaceLg);
+}
+
+.internal-hero-header {
+  max-width: 850px;
+}
+
+.internal-hero-highlight {
+  color: var(--mainBrandColour);
+}
+
+.internal-hero-kicker {
+  margin-bottom: var(--spaceSm);
+  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+  font-weight: 400;
+}
+
+.internal-hero-copy {
+  color: var(--textColour2);
+}
+
+/* Background circles (bobbing like homepage) */
+.internal-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.internal-hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: bob 8s ease-in-out infinite;
+}
+
+/* Large aqua circle on right */
+.internal-hero-circle1 {
+  width: 280px;
+  height: 280px;
+  right: -300px;
+  top: 60px;
+  background: var(--mainBrandColour);
+}
+
+/* Smaller red overlapping circle */
+.internal-hero-circle2 {
+  width: 170px;
+  height: 170px;
+  right: -140px;
+  top: 250px;
+  background: var(--brandAccentColour);
+  animation-delay: 2s;
+}
+
+/* Ensure content is above circles */
+.internal-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .internal-hero-inner {
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
+  }
+
+  .internal-hero-header {
+    max-width: 100%;
+  }
+
+  .internal-hero-circle1 {
+    width: 280px;
+    height: 280px;
+    right: -160px;
+    top: 10px;
+  }
+
+  .internal-hero-circle2 {
+    width: 160px;
+    height: 160px;
+    right: -30px;
+    top: 150px;
+  }
+}
 
 /* =========================
    FOOTER Component
@@ -758,16 +862,25 @@ h3 {
   transform: translateY(24px);
   will-change: opacity, transform;
   transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out,
-    box-shadow 0.3s;
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    box-shadow 0.6s;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out,
-    box-shadow 0.3s;
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    box-shadow 0.6s;
+}
+
+@keyframes bob {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
 }

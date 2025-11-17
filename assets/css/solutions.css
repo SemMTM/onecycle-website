@@ -1,0 +1,213 @@
+/* =========================
+   CAPABILITIES Component
+   ========================= */
+
+#capabilities {
+  background: var(--bgColour2);
+  color: var(--textColour1);
+}
+
+.capabilities-inner {
+  max-width: 950px;
+}
+
+
+.capabilities-header {
+  margin-bottom: var(--spaceLg);
+  max-width: 70ch;
+}
+
+.capabilities-header h2 {
+  margin-bottom: var(--spaceSm);
+}
+
+.capabilities-accent {
+  color: var(--brandAccentColour);
+}
+
+.capabilities-intro {
+  color: var(--textColour2);
+}
+
+/* Cards wrapper */
+.capabilities-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaceLg);
+}
+
+/* Individual card */
+.capabilities-card {
+  background: var(--bgColour3);
+  border-radius: 4px;
+  padding: var(--spaceMd);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.capabilities-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+/* Card header: icon + titles */
+.capabilities-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spaceSm);
+  margin-bottom: var(--spaceSmMd);
+}
+
+.capabilities-card-header h3 {
+  font-weight: 400;
+}
+
+/* reuse existing .icon-circle; just adjust bottom margin for this section */
+.capabilities-card-header .icon-circle {
+  margin-bottom: 0;
+}
+
+/* Subheading line under h3 */
+.capabilities-subheading {
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.capabilities-subheading-blue {
+  color: var(--mainBrandColour);
+}
+
+/* Body paragraph */
+.capabilities-body {
+  color: var(--textColour2);
+  margin-bottom: var(--spaceSmMd);
+}
+
+/* Bullet list */
+.capabilities-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.capabilities-bullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--textColour2);
+}
+
+/* Custom check bullet */
+.capabilities-bullets li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--mainBrandColour);
+  font-weight: 400;
+}
+
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .capabilities-inner {
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
+  }
+
+  .capabilities-card {
+    padding: var(--spaceSm);
+  }
+}
+
+
+/* =========================
+   SUPPORTING SERVICES Component
+   ========================= */
+#support {
+  background: var(--bgColour3);
+  color: var(--textColour1);
+}
+
+.support-inner {
+  max-width: 950px;
+}
+
+/* Header */
+.support-header {
+  text-align: left;
+  margin-bottom: var(--spaceLg);
+}
+
+.support-header h2 {
+  font-weight: 300;
+  margin-bottom: var(--spaceSm);
+}
+
+.support-accent {
+  color: var(--brandAccentColour);
+}
+
+.support-intro {
+  color: var(--textColour2);
+  max-width: 70ch;
+}
+
+/* Grid */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spaceSmMd);
+}
+
+/* Cards */
+.support-card {
+  background: var(--bgColour1);
+  border-radius: 4px;
+  padding: var(--spaceMd);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+/* Card header: icon + title */
+.support-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--spaceSm);
+  margin-bottom: var(--spaceSm);
+}
+
+.support-card-header .icon-circle {
+  margin-bottom: 0;
+}
+
+.support-card-header h3 {
+  font-weight: 400;
+}
+
+/* Body text */
+.support-body {
+  color: var(--textColour2);
+  max-width: 50ch;
+}
+
+/* Mobile ≤425px */
+@media (max-width: 425px) {
+  .support-inner {
+    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card {
+    padding: var(--spaceSm);
+  }
+}
