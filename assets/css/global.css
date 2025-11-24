@@ -252,13 +252,17 @@ h3 {
 }
 
 .nav1-logo {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--mainBrandColour);
-  text-decoration: none;
-  font-family: var(--logoFont);
-  display: flex;
-  align-items: center;
+  height: clamp(2rem, 6.4vw, 3rem);
+  justify-content: center;
+  padding: 0;
+  width: auto;
+  z-index: 10;
+}
+
+.nav1-logo img {
+  height: 100%;
+  object-fit: contain;
+  width: auto;
 }
 
 .nav1-toggle {
@@ -631,6 +635,10 @@ h3 {
   padding: var(--sectionPadding);
 }
 
+#footer1 .nav1-logo {
+  align-self: center;
+}
+
 .footer1-inner {
   display: flex;
   flex-direction: column;
@@ -643,14 +651,6 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
   gap: var(--spaceSmMd);
-}
-
-/* Brand */
-.footer1-logo {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin-bottom: var(--spaceXs);
 }
 
 .footer1-tagline {
