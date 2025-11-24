@@ -76,8 +76,7 @@
 
 /* always show a focus style */
 :focus-visible{
-  outline: 1px solid var(--mainBrandColour);
-  transition: outline 0.2s;
+  outline: 2px solid var(--mainBrandColour);
 }
 
 /* reduced motion */
@@ -87,6 +86,13 @@
     animation-iteration-count:1 !important;
     transition-duration:0.01ms !important;
     scroll-behavior:auto !important
+  }
+
+  .reveal,
+  .sweep-to-top,
+  .your-animation-class {
+    animation: none;
+    transition: none;
   }
 }
 
@@ -635,10 +641,6 @@ h3 {
   padding: var(--sectionPadding);
 }
 
-#footer1 .nav1-logo {
-  align-self: center;
-}
-
 .footer1-inner {
   display: flex;
   flex-direction: column;
@@ -788,6 +790,10 @@ h3 {
   .footer1-copy {
     text-align: center;
   }
+
+  #footer1 .nav1-logo {
+  align-self: center;
+}
 }
 
 

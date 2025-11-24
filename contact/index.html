@@ -54,7 +54,7 @@
     <div class="nav1-container container">
       <!-- Logo -->
       <a href="/" class="nav1-logo">
-        <img alt="logo" aria-hidden="true" decoding="async"
+        <img alt="OneCycle" decoding="async"
           srcset="/assets/images/onecycle-logo.webp">
       </a>
 
@@ -84,7 +84,7 @@
               <li><a href="/contact/" class="active" aria-current="page">Contact</a></li>
             </ul>
             <div class="header-btn">
-              <a href="/contact/" class="cta-button" aria-label="Get Started - go to Contact Page">Get in Touch</a>
+              <a href="/contact/" class="cta-button">Get in Touch</a>
             </div>
           </div>
         </nav>
@@ -96,7 +96,6 @@
           <a 
             href="/contact/" 
             class="cta-button sweep-to-top" 
-            aria-label="Get Started - go to Contact Page"
             style="padding: 0.7rem 1.5rem;"
             >
             Get in Touch</a>
@@ -110,10 +109,10 @@
   <!-- Nav1 Component End -->
 
   <!-- Main Content -->
-  <main id="main-content" role="main" tabindex="-1">
+  <main id="main-content" tabindex="-1">
 
     <!-- SERVICES PAGE HERO -->
-    <section id="services-hero" class="internal-hero section" aria-labelledby="services-hero-title">
+    <section id="services-hero" class="internal-hero section" aria-labelledby="internal-hero-title">
       <!-- Background circles -->
       <div class="internl-hero-bg" aria-hidden="true">
         <div class="internal-hero-circle internal-hero-circle1"></div>
@@ -123,7 +122,7 @@
       <div class="container internal-hero-inner">
         <div class="internal-hero-header">
           <h1 id="internal-hero-title" class="internal-hero-title">
-            Get in<span class="brand-accent-blue">Touch</span>
+            Get in<span class="brand-accent-blue"> Touch</span>
           </h1>
 
           <p class="internal-hero-copy">
@@ -164,23 +163,30 @@
 
           <!-- Right: Form card -->
           <div class="contact-form-panel">
-            <form class="contact-form" action="#" method="post" novalidate>
+            <form 
+              name="contact"
+              class="contact-form" 
+              action="#" 
+              method="post" 
+              data-netlify-recaptcha="true"
+              netlify
+            >
               <!-- Name row -->
               <div class="contact-row contact-row--two">
                 <div class="contact-form-group">
-                  <label for="first-name">First Name</label>
-                  <input id="first-name" name="first_name" type="text" autocomplete="given-name">
+                  <label for="first-name">First Name *</label>
+                  <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
                 </div>
                 <div class="contact-form-group">
-                  <label for="last-name">Last Name</label>
-                  <input id="last-name" name="last_name" type="text" autocomplete="family-name">
+                  <label for="last-name">Last Name *</label>
+                  <input id="last-name" name="last_name" type="text" autocomplete="family-name" required>
                 </div>
               </div>
 
               <!-- Email -->
               <div class="contact-form-group">
-                <label for="email">Email Address</label>
-                <input id="email" name="email" type="email" autocomplete="email">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
               </div>
 
               <!-- Company -->
@@ -197,9 +203,11 @@
 
               <!-- Message -->
               <div class="contact-form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
               </div>
+
+              <div data-netlify-recaptcha="true"></div>
 
               <!-- Submit -->
               <div class="contact-actions">
@@ -222,11 +230,11 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="footer1" class="section" aria-labelledby="footer1-title">
+  <footer id="footer1" class="section">
     <div class="container footer1-inner">
       <!-- Logo -->
       <a href="/" class="nav1-logo">
-        <img alt="logo" aria-hidden="true" decoding="async"
+        <img alt="OneCycle" decoding="async"
           srcset="/assets/images/onecycle-logo.webp">
       </a>
       <!-- Top Row -->

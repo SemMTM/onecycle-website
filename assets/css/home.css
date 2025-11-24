@@ -97,6 +97,10 @@
   #hero2 a {
     width: 235px;
   }
+
+  .hero2-inner {
+    margin: 0 auto;
+  }
 }
 
 /* =========================
