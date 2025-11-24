@@ -175,10 +175,6 @@
 }
 
 @media (max-width: 425px) {
-  .progress-inner { 
-    padding: clamp(2.5rem, 6vw, 3rem) 1rem; 
-  }
-
   .progress-grid {
     grid-template-columns: 1fr;
     gap: var(--spaceSm);
@@ -436,12 +432,15 @@
 /* Mobile ≤425px */
 @media (max-width: 768px) {
   .circle-left-1 {
-
+    width: 210px;
+    height: 210px;
+    top: 0px;
   }
     
   .circle-left-2 {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
+    top: 140px;
   }
 }
 

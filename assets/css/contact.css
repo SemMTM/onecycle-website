@@ -104,12 +104,14 @@
 
 .contact-info-email {
   color: var(--textColour1);
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .contact-info-email:hover {
   color: var(--mainBrandColour);
+  transition: color 0.3s;
 }
 
 /* Right: form panel */
@@ -148,12 +150,13 @@
   border-radius: 2px;
   border: 1px solid rgba(0,0,0,0.12);
   background: #fdfdfd;
+  transition: outline 0.2s;
 }
 
 .contact-form-group input:focus-visible,
 .contact-form-group textarea:focus-visible {
-  outline: 2px solid var(--mainBrandColour);
-  outline-offset: 1px;
+  outline: 1px solid var(--mainBrandColour);
+  transition: outline 0.2s;
 }
 
 /* Submit + privacy */
