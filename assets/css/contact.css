@@ -141,7 +141,7 @@
 }
 
 .contact-form-group label {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .contact-form-group input,
@@ -151,6 +151,7 @@
   border: 1px solid rgba(0,0,0,0.12);
   background: #fdfdfd;
   transition: outline 0.2s;
+  font: var(--bodyFont);
 }
 
 .contact-form-group input:focus-visible,

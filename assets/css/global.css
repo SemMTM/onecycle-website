@@ -35,15 +35,6 @@
        url('/assets/fonts/Lato-Light.woff') format('woff'); 
 }
 
-@font-face {
-  font-display: swap; 
-  font-family: 'Neuropol-X';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/Neuropol-X-Rg.woff2') format('woff2'),
-       url('/assets/fonts/Neuropol-X-Rg.woff') format('woff'); 
-}
-
 /* visible-only-on-focus skip link */
 .skip-link{
   position:absolute;
@@ -77,6 +68,12 @@
 /* always show a focus style */
 :focus-visible{
   outline: 2px solid var(--mainBrandColour);
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
 }
 
 /* reduced motion */
