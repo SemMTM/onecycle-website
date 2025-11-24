@@ -82,20 +82,6 @@
 }
 
 @media (max-width: 425px) {
-  #hero2 {
-    background:
-      radial-gradient(32rem 32rem at 50% 35%, rgba(7,159,198,0.10), transparent 60%),
-      linear-gradient(180deg, var(--bgColour1), var(--bgColour2));
-  }
-
-  .hero2-inner {
-    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
-  }
-
-  .hero2-title {
-    font-size: clamp(1.9rem, 8vw, 2.6rem);
-  }
-
   .hero2-actions {
     width: 100%;
     flex-direction: column;
@@ -252,8 +238,8 @@
 }
 
 .circle1 {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   background: var(--mainBrandColour);
   right: -120px;
   top: 60px;
@@ -261,11 +247,11 @@
 }
 
 .circle2 {
-  width: 170px;
-  height: 170px;
+  width: 130px;
+  height: 130px;
   background: var(--brandAccentColour);
-  right: 40px;
-  top: 210px;
+  right: 30px;
+  top: 200px;
   animation-delay: 2s;
 }
 
@@ -360,11 +346,11 @@
   }
 
   .circle1 {
-    right: -210px;
+    right: -170px;
   }
 
   .circle2 {
-    right: -80px;
+    right: -40px;
   }
 }
 
@@ -422,22 +408,20 @@
   animation: bob 8s ease-in-out infinite;
 }
 
-/* Large aqua disk half off the left edge */
 .circle-left-1 {
   width: 240px;
   height: 240px;
-  left: -200px;      /* off-canvas to match screenshot */
+  left: -180px;   
   top: 70px;
   background: var(--mainBrandColour);
   animation-delay: 0s;
 }
 
-/* Smaller red disk overlapping */
 .circle-left-2 {
-  width: 140px;
-  height: 140px;
-  left: -80px;
-  top: 210px;
+  width: 110px;
+  height: 110px;
+  left: -40px;
+  top: 230px;
   background: var(--brandAccentColour);
   opacity: 0.35;
   animation-delay: 2s;
@@ -450,8 +434,12 @@
 }
 
 /* Mobile ≤425px */
-  @media (max-width: 425px) {
-    .circle-left-2 {
+@media (max-width: 768px) {
+  .circle-left-1 {
+
+  }
+    
+  .circle-left-2 {
     width: 110px;
     height: 110px;
   }

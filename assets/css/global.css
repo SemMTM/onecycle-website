@@ -607,21 +607,17 @@ h3 {
 }
 
 /* Mobile ≤425px */
-@media (max-width: 425px) {
-  .internal-hero-inner {
-    padding: clamp(2.5rem, 6vw, 3rem) 1rem;
-  }
-
-  .internal-hero-header {
-    max-width: 100%;
-  }
-
+@media (max-width: 700px) {
   .internal-hero-circle1 {
-    top: 50px;
+    top: 10px;
+    width: 220px;
+    height: 220px;
   }
 
   .internal-hero-circle2 {
-    top: 200px;
+    top: 150px;
+    width: 100px;
+    height: 100px; 
   }
 }
 
