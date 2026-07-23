@@ -1,486 +1,735 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
-<head>
-  <!-- Meta -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light"> 
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
 
-  <!-- Primary SEO -->
-  <title>OneCycle | Sustainable Recovery & Refining</title>
-  <meta name="description" content="Turning hazardous materials into valuable resources through science-driven recovery, sustainable refining, and environmental remediation.">
-  <link rel="canonical" href="https://onecyclegroup.com/">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <!-- Primary SEO -->
+    <title>OneCycle | Sustainable Recovery & Refining</title>
+    <meta
+      name="description"
+      content="Turning hazardous materials into valuable resources through science-driven recovery, sustainable refining, and environmental remediation."
+    />
+    <link rel="canonical" href="https://onecyclegroup.com/" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
 
-  <!-- Icons & PWA -->
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/onecycle-favi-48.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/onecycle-favicon.png">
-  <link rel="apple-touch-icon" href="/assets/images/onecycle-favicon.png"> 
-  <meta name="theme-color" content="#F3F3F3"> 
+    <!-- Icons & PWA -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/images/onecycle-favi-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/images/onecycle-favicon.png"
+    />
+    <link rel="apple-touch-icon" href="/assets/images/onecycle-favicon.png" />
+    <meta name="theme-color" content="#F3F3F3" />
 
-  <!-- Global CSS -->
-  <link rel="preload" href="/assets/css/root.css" as="style">
-  <link rel="stylesheet" href="/assets/css/root.css">
-  <link rel="preload" href="/assets/css/global.css" as="style">
-  <link rel="stylesheet" href="/assets/css/global.css">
+    <!-- Global CSS -->
+    <link rel="preload" href="/assets/css/root.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/root.css" />
+    <link rel="preload" href="/assets/css/global.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
 
-  <!-- Page Specific CSS -->
-  <link rel="preload" href="/assets/css/home.css" as="style">
-  <link rel="stylesheet" href="/assets/css/home.css">
+    <!-- Page Specific CSS -->
+    <link rel="preload" href="/assets/css/home.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
 
-  <!-- Head image -->
-  <link
-    rel="preload"
-    as="image"
-    href="/assets/images/water-ripple.webp"
-    fetchpriority="high"
-  >
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/water-ripple.webp"
+      type="image/webp"
+    />
 
-  <!-- Fonts -->
-  <link href="/assets/fonts/Exo2-Light.woff2" rel="preload" as="font" 
-  crossorigin type="font/woff2">
-  <link href="/assets/fonts/Exo2-Regular.woff2" rel="preload" as="font" 
-  crossorigin type="font/woff2">
-  <link href="/assets/fonts/Lato-Light.woff2" rel="preload" as="font" 
-  crossorigin type="font/woff2">
-  <link href="/assets/fonts/Lato-Regular.woff2" rel="preload" as="font" 
-  crossorigin type="font/woff2">
+    <!-- Head image -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/water-ripple.webp"
+      fetchpriority="high"
+    />
 
-  <!-- Other head and Json data under here -->
-  <!-- ===== Open Graph (Facebook/LinkedIn) ===== -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="OneCycle">
-  <meta property="og:url" content="https://onecyclegroup.com/">
-  <meta property="og:title" content="OneCycle | Sustainable Recovery & Refining">
-  <meta property="og:description" content="Turning hazardous materials into valuable resources through science-driven recovery, sustainable refining, and environmental remediation.">
-  <meta property="og:image" content="https://onecyclegroup.com/assets/images/onecycle-logo.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="OneCycle Logo">
-  <meta property="og:locale" content="en_GB">
+    <!-- Fonts -->
+    <link
+      href="/assets/fonts/Exo2-Light.woff2"
+      rel="preload"
+      as="font"
+      crossorigin
+      type="font/woff2"
+    />
+    <link
+      href="/assets/fonts/Exo2-Regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin
+      type="font/woff2"
+    />
+    <link
+      href="/assets/fonts/Lato-Light.woff2"
+      rel="preload"
+      as="font"
+      crossorigin
+      type="font/woff2"
+    />
+    <link
+      href="/assets/fonts/Lato-Regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin
+      type="font/woff2"
+    />
 
-  <!-- Json Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://onecyclegroup.com/#website",
-    "name": "OneCycle",
-    "url": "https://onecyclegroup.com/",
-    "inLanguage": "en-GB",
-    "hasPart":[
-      {"@type":"WebPage","@id":"https://onecyclegroup.com/our-solutions/#webpage"},
-      {"@type":"WebPage","@id":"https://onecyclegroup.com/about/#webpage"},
-      {"@type":"WebPage","@id":"https://onecyclegroup.com/contact/#webpage"}
-    ]
-  }
-  </script>
+    <!-- Other head and Json data under here -->
+    <!-- ===== Open Graph (Facebook/LinkedIn) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OneCycle" />
+    <meta property="og:url" content="https://onecyclegroup.com/" />
+    <meta
+      property="og:title"
+      content="OneCycle | Sustainable Recovery & Refining"
+    />
+    <meta
+      property="og:description"
+      content="Turning hazardous materials into valuable resources through science-driven recovery, sustainable refining, and environmental remediation."
+    />
+    <meta
+      property="og:image"
+      content="https://onecyclegroup.com/assets/images/onecycle-logo.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OneCycle Logo" />
+    <meta property="og:locale" content="en_GB" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://onecyclegroup.com/#organization",
-    "name": "OneCycle",
-    "legalName":"OneCycle Noble Metals",
-    "url": "https://onecyclegroup.com/",
-    "logo": {
-      "@type":"ImageObject",
-      "url":"https://onecyclegroup.com/assets/images/onecycle-logo.jpg",
-      "width":833,
-      "height":287
-    },
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer support",
-      "email":"info@onecyclegroup.com",
-      "availableLanguage":["en-GB","en"],
-      "areaServed":["GB","Worldwide"]
-    }]
-  }
-  </script>
-</head>
+    <!-- Json Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://onecyclegroup.com/#website",
+        "name": "OneCycle",
+        "url": "https://onecyclegroup.com/",
+        "inLanguage": "en-GB",
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "@id": "https://onecyclegroup.com/our-solutions/#webpage"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://onecyclegroup.com/about/#webpage"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://onecyclegroup.com/contact/#webpage"
+          }
+        ]
+      }
+    </script>
 
-<body> 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <!-- Nav1 Component Start -->
-  <!-- Nav1 Component Start -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://onecyclegroup.com/#organization",
+        "name": "OneCycle",
+        "legalName": "OneCycle Noble Metals",
+        "url": "https://onecyclegroup.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://onecyclegroup.com/assets/images/onecycle-logo.jpg",
+          "width": 833,
+          "height": 287
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "info@onecyclegroup.com",
+            "availableLanguage": ["en-GB", "en"],
+            "areaServed": ["GB", "Worldwide"]
+          }
+        ]
+      }
+    </script>
+  </head>
 
-  <!-- Header -->
-  <header id="nav1-navigation">
-    <div class="nav1-container container">
-      <!-- Logo -->
-      <a href="/" class="nav1-logo">
-        <img alt="OneCycle" decoding="async"
-          srcset="/assets/images/onecycle-logo.webp">
-      </a>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Nav1 Component Start -->
+    <!-- Nav1 Component Start -->
 
-      <!-- Nav Menu -->
-      <div class="nav1-inner">
-        <nav class="nav1-nav" role="navigation" aria-label="Primary">
-          <!-- Toggle Button -->
-          <button 
-            class="nav1-toggle" 
-            aria-label="Toggle Navigation"
-            aria-controls="nav-menu"
-            aria-expanded="false"
+    <!-- Header -->
+    <header id="nav1-navigation">
+      <div class="nav1-container container">
+        <!-- Logo -->
+        <a href="/" class="nav1-logo">
+          <img
+            alt="OneCycle"
+            decoding="async"
+            srcset="/assets/images/onecycle-logo.webp"
+          />
+        </a>
+
+        <!-- Nav Menu -->
+        <div class="nav1-inner">
+          <nav class="nav1-nav" role="navigation" aria-label="Primary">
+            <!-- Toggle Button -->
+            <button
+              class="nav1-toggle"
+              aria-label="Toggle Navigation"
+              aria-controls="nav-menu"
+              aria-expanded="false"
             >
-            <div class="nav1-toggle-box">
-              <span class="nav1-line" aria-hidden="true"></span>
-              <span class="nav1-line" aria-hidden="true"></span>
-              <span class="nav1-line" aria-hidden="true"></span>
-            </div>
-          </button>
+              <div class="nav1-toggle-box">
+                <span class="nav1-line" aria-hidden="true"></span>
+                <span class="nav1-line" aria-hidden="true"></span>
+                <span class="nav1-line" aria-hidden="true"></span>
+              </div>
+            </button>
 
-          <div class="nav1-ul-wrapper" id="nav-menu">
-            <ul class="nav1-ul">
-              <!-- Home -->
-              <li><a href="/" class="active" aria-current="page">Home</a></li>
+            <div class="nav1-ul-wrapper" id="nav-menu">
+              <ul class="nav1-ul">
+                <!-- Home -->
+                <li><a href="/" class="active" aria-current="page">Home</a></li>
+                <li><a href="/our-solutions/">Our Solutions</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+              </ul>
+              <div class="header-btn">
+                <a href="/contact/" class="cta-button">Get in Touch</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="header-btn" style="margin-left: 3rem">
+            <a
+              href="/contact/"
+              class="cta-button sweep-to-top"
+              style="padding: 0.7rem 1.5rem"
+            >
+              Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="nav1-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <!-- Nav1 Component End -->
+    <!-- Nav1 Component End -->
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+      <!-- HERO2 -->
+      <section id="hero2" class="section" aria-labelledby="hero2-title">
+        <div class="container hero2-inner">
+          <h1 id="hero2-title" class="hero2-title">
+            Turning Hazardous Materials into
+            <span class="brand-accent-blue">Valuable Resources</span>
+          </h1>
+
+          <p class="hero2-lead">
+            Science-driven recovery and refining technologies that transform
+            industrial by-products into sustainable value.
+          </p>
+
+          <p class="hero2-sub">
+            OneCycle develops advanced processes that convert hazardous waste
+            into reusable materials, protecting the environment through
+            precision, responsibility, and innovation.
+          </p>
+
+          <div class="hero2-actions" role="group" aria-label="Primary actions">
+            <a href="/our-solutions/" class="sweep-to-top cta-button"
+              >Learn About our Solutions</a
+            >
+            <a href="/contact/" class="sweep-to-top cta-button sub-btn"
+              >Discuss a Collaboration</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- PROGRESS SECTION -->
+      <section id="progress" class="section" aria-labelledby="progress-title">
+        <div class="container progress-inner">
+          <div class="progress-header">
+            <h2 id="progress-title">
+              Progress Through <span class="brand-accent">Precision.</span>
+            </h2>
+            <p class="progress-intro">
+              Each figure represents verifiable results achieved through
+              <span class="brand-accent">science and sustainability</span>.
+            </p>
+          </div>
+
+          <ul class="progress-grid">
+            <li class="progress-card reveal">
+              <p class="progress-figure">25+</p>
+              <p class="progress-copy">
+                Years combined experience in sustainable materials recovery
+              </p>
+            </li>
+
+            <li class="progress-card reveal">
+              <p class="progress-figure">90%+</p>
+              <p class="progress-copy">Reduction in hazardous waste achieved</p>
+            </li>
+
+            <li class="progress-card reveal">
+              <p class="progress-figure">Global</p>
+              <p class="progress-copy">
+                Projects delivered across the UK and global sites
+              </p>
+            </li>
+
+            <li class="progress-card reveal">
+              <p class="progress-figure">100%</p>
+              <p class="progress-copy">
+                Proprietary low-emission refining systems
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SOLUTIONS SECTION -->
+      <section id="solutions" class="section" aria-labelledby="solutions-title">
+        <!-- Background Shapes -->
+        <div class="solutions-bg" aria-hidden="true">
+          <div class="solutions-circle circle1"></div>
+          <div class="solutions-circle circle2"></div>
+        </div>
+
+        <div class="container solutions-inner">
+          <div class="solutions-header">
+            <p class="solutions-subheading brand-accent">Our Solutions</p>
+            <h2 id="solutions-title">
+              Sustainable Recovery.
+              <span class="brand-accent">Measurable Results.</span>
+            </h2>
+            <p class="solutions-intro">
+              Our technologies are built to extract value responsibly from
+              hazardous residues to refined, reusable materials. Every solution
+              is tailored, data-led, and aligned with circular economy
+              principles.
+            </p>
+          </div>
+
+          <!-- Service Cards -->
+          <div class="solutions-grid">
+            <div class="solutions-card reveal">
+              <div class="icon-circle">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M259.1 73.5C262.1 58.7 275.2 48 290.4 48L350.2 48C365.4 48 378.5 58.7 381.5 73.5L396 143.5C410.1 149.5 423.3 157.2 435.3 166.3L503.1 143.8C517.5 139 533.3 145 540.9 158.2L570.8 210C578.4 223.2 575.7 239.8 564.3 249.9L511 297.3C511.9 304.7 512.3 312.3 512.3 320C512.3 327.7 511.8 335.3 511 342.7L564.4 390.2C575.8 400.3 578.4 417 570.9 430.1L541 481.9C533.4 495 517.6 501.1 503.2 496.3L435.4 473.8C423.3 482.9 410.1 490.5 396.1 496.6L381.7 566.5C378.6 581.4 365.5 592 350.4 592L290.6 592C275.4 592 262.3 581.3 259.3 566.5L244.9 496.6C230.8 490.6 217.7 482.9 205.6 473.8L137.5 496.3C123.1 501.1 107.3 495.1 99.7 481.9L69.8 430.1C62.2 416.9 64.9 400.3 76.3 390.2L129.7 342.7C128.8 335.3 128.4 327.7 128.4 320C128.4 312.3 128.9 304.7 129.7 297.3L76.3 249.8C64.9 239.7 62.3 223 69.8 209.9L99.7 158.1C107.3 144.9 123.1 138.9 137.5 143.7L205.3 166.2C217.4 157.1 230.6 149.5 244.6 143.4L259.1 73.5zM320.3 400C364.5 399.8 400.2 363.9 400 319.7C399.8 275.5 363.9 239.8 319.7 240C275.5 240.2 239.8 276.1 240 320.3C240.2 364.5 276.1 400.2 320.3 400z"
+                  />
+                </svg>
+              </div>
+              <h3>Advanced Material Recovery</h3>
+              <p>
+                Recovery of high-value elements from hazardous industrial
+                by-products and residues using clean, data-driven technologies.
+              </p>
+            </div>
+
+            <div class="solutions-card reveal">
+              <div class="icon-circle">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M384 64L224 64C206.3 64 192 78.3 192 96C192 113.7 206.3 128 224 128L224 279.5L103.5 490.3C98.6 499 96 508.7 96 518.7C96 550.4 121.6 576 153.3 576L486.7 576C518.3 576 544 550.4 544 518.7C544 508.7 541.4 498.9 536.5 490.3L416 279.5L416 128C433.7 128 448 113.7 448 96C448 78.3 433.7 64 416 64L384 64zM288 279.5L288 128L352 128L352 279.5C352 290.6 354.9 301.6 360.4 311.3L402 384L238 384L279.6 311.3C285.1 301.6 288 290.7 288 279.5z"
+                  />
+                </svg>
+              </div>
+              <h3>Sustainable Refining Solutions</h3>
+              <p>
+                Low-emission, high-efficiency refining methods tailored to
+                client materials and compliance needs.
+              </p>
+            </div>
+
+            <div class="solutions-card reveal">
+              <div class="icon-circle">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z"
+                  />
+                </svg>
+              </div>
+              <h3>Environmental Remediation & Circular Projects</h3>
+              <p>
+                Projects that turn hazardous materials into reusable assets and
+                support restoration of land and water quality.
+              </p>
+            </div>
+
+            <div class="solutions-card reveal">
+              <div class="icon-circle">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
+                  />
+                </svg>
+              </div>
+              <h3>R&amp;D in Clean-Technology Innovation</h3>
+              <p>
+                Development of next-generation electrochemical and process
+                technologies from concept through pilot scale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Supporting Capabilities -->
+          <div class="solutions-support reveal">
+            <h4>Supporting Capabilities</h4>
+            <ul>
+              <li>
+                <svg
+                  class="icon-small"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="20"
+                  width="20"
+                >
+                  <path
+                    d="M240 64C213.5 64 192 85.5 192 112L192 320C192 346.5 213.5 368 240 368L304 368C330.5 368 352 346.5 352 320L352 256L384 256C454.7 256 512 313.3 512 384C512 454.7 454.7 512 384 512L96 512C78.3 512 64 526.3 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 526.3 561.7 512 544 512L527.1 512C557.5 478 576 433.2 576 384C576 278 490 192 384 192L352 192L352 112C352 85.5 330.5 64 304 64L240 64zM184 416C170.7 416 160 426.7 160 440C160 453.3 170.7 464 184 464L360 464C373.3 464 384 453.3 384 440C384 426.7 373.3 416 360 416L184 416z"
+                  />
+                </svg>
+                Laboratory analysis &amp; process validation
+              </li>
+              <li>
+                <svg
+                  class="icon-small"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="20"
+                  width="20"
+                >
+                  <path
+                    d="M163.3 320.1L232.7 200.2C227.1 188 223.9 174.4 223.9 160C223.9 107 266.9 64 319.9 64C372.9 64 415.9 107 415.9 160C415.9 174.3 412.8 187.9 407.1 200.2L451.5 276.9C428.4 302.9 397.8 322 363.1 330.7L320 255.9L251.9 373.5C273.4 380.3 296.2 384 320 384C390.7 384 453.8 351.3 494.9 300C506 286.2 526.1 284 539.9 295C553.7 306 555.9 326.2 544.9 340C492.2 405.8 411 448 320.1 448C284.7 448 250.7 441.6 219.4 429.9L162.7 527.7C158 535.8 151 542.4 142.6 546.6L87.2 574.3C82.2 576.8 76.3 576.5 71.6 573.6C66.9 570.7 64 565.5 64 560L64 504.6C64 496.2 66.2 487.9 70.5 480.5L130.5 376.8C117.7 365.6 105.9 353.3 95.2 340C84.1 326.2 86.4 306.1 100.2 295C114 283.9 134.1 286.2 145.2 300C150.9 307.1 157 313.8 163.4 320.1zM445.1 471.9C477.6 458.9 507.5 440.9 534 419L569.6 480.5C573.8 487.8 576.1 496.1 576.1 504.6L576.1 560C576.1 565.5 573.2 570.7 568.5 573.6C563.8 576.5 557.9 576.8 552.9 574.3L497.5 546.6C489.1 542.4 482.1 535.8 477.4 527.7L445.1 471.9zM320 192C337.7 192 352 177.7 352 160C352 142.3 337.7 128 320 128C302.3 128 288 142.3 288 160C288 177.7 302.3 192 320 192z"
+                  />
+                </svg>
+                System design &amp; engineering support
+              </li>
+              <li>
+                <svg
+                  class="icon-small"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="20"
+                  width="20"
+                >
+                  <path
+                    d="M384 64C407.7 64 428.4 76.9 439.4 96L448 96C483.3 96 512 124.7 512 160L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 160C128 124.7 156.7 96 192 96L200.6 96C211.6 76.9 232.3 64 256 64L384 64zM410.9 276.6C400.2 268.8 385.2 271.2 377.4 281.9L291.8 399.6L265.3 372.2C256.1 362.7 240.9 362.4 231.4 371.6C221.9 380.8 221.6 396 230.8 405.5L277.2 453.5C282.1 458.6 289 461.3 296.1 460.8C303.2 460.3 309.7 456.7 313.9 451L416.2 310.1C424 299.4 421.6 284.4 410.9 276.6zM264 128C250.7 128 240 138.7 240 152C240 165.3 250.7 176 264 176L376 176C389.3 176 400 165.3 400 152C400 138.7 389.3 128 376 128L264 128z"
+                  />
+                </svg>
+                Consulting on sustainable technology, compliance, and circular
+                economy integration
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY SECTION -->
+      <section
+        id="philosophy"
+        class="section"
+        aria-labelledby="philosophy-title"
+      >
+        <!-- Background shapes -->
+        <div class="philosophy-bg" aria-hidden="true">
+          <div class="philosophy-circle circle-left-1"></div>
+          <div class="philosophy-circle circle-left-2"></div>
+        </div>
+        <div class="container philosophy-inner">
+          <p class="philosophy-kicker reveal">Our Philosophy</p>
+
+          <h2 id="philosophy-title">
+            Where Science Meets
+            <span class="brand-accent">Responsibility</span>.
+          </h2>
+
+          <p class="philosophy-copy">
+            We believe science and sustainability should work hand in hand.
+            Every OneCycle process is designed to protect the environment while
+            unlocking new economic and material value.
+          </p>
+
+          <p class="philosophy-copy">
+            Our approach combines precision engineering with environmental
+            stewardship. We operate quietly, focusing on results, data, and
+            long-term collaboration.
+          </p>
+
+          <p class="philosophy-tagline brand-accent">
+            Progress through precision. Sustainability through science.
+          </p>
+        </div>
+      </section>
+
+      <!-- IMPACT SECTION -->
+      <section id="impact" class="section" aria-labelledby="impact-title">
+        <div class="container impact-inner">
+          <header class="impact-header">
+            <h2 id="impact-title">
+              <span class="brand-accent">Real-World</span> Impact.
+            </h2>
+            <p class="impact-intro">
+              From reducing hazardous waste by over 90% to achieving
+              zero-emission refining pathways, OneCycle’s work demonstrates what
+              responsible innovation can achieve.
+            </p>
+          </header>
+
+          <ul class="impact-grid" role="list">
+            <!-- Card 1 -->
+            <li
+              class="impact-card card-blue reveal"
+              role="listitem"
+              aria-label="Ninety five percent industrial metal residues recovery"
+            >
+              <div class="impact-card-content">
+                <p class="impact-card-figure">95%</p>
+                <h3 class="impact-card-title">
+                  Industrial Metal Residues Recovery
+                </h3>
+                <p class="impact-card-desc">
+                  Material yield achieved through advanced extraction processes.
+                </p>
+              </div>
+            </li>
+
+            <!-- Card 2 -->
+            <li
+              class="impact-card card-slate reveal"
+              role="listitem"
+              aria-label="Remediation project converting hazardous soil to reusable material with zero residual contamination"
+            >
+              <div class="impact-card-icon">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M216.3 124C262.5 44 378 44 424.2 124L461.5 188.6L489.2 172.6C497.6 167.7 508.1 168.4 515.8 174.3C523.5 180.2 526.9 190.2 524.4 199.6L500.9 287C497.5 299.8 484.3 307.4 471.5 304L384.1 280.6C374.7 278.1 367.8 270.2 366.5 260.6C365.2 251 369.9 241.5 378.3 236.7L406 220.7L368.7 156.1C347.1 118.8 293.3 118.8 271.7 156.1L266.4 165.2C257.6 180.5 238 185.7 222.7 176.9C207.4 168.1 202.2 148.5 211 133.1L216.3 124zM513.7 343.1C529 334.3 548.6 339.5 557.4 354.8L562.7 363.9C608.9 443.9 551.2 543.9 458.8 543.9L384.2 543.9L384.2 575.9C384.2 585.6 378.4 594.4 369.4 598.1C360.4 601.8 350.1 599.8 343.2 592.9L279.2 528.9C269.8 519.5 269.8 504.3 279.2 495L343.2 431C350.1 424.1 360.4 422.1 369.4 425.8C378.4 429.5 384.2 438.3 384.2 448L384.2 480L458.8 480C501.9 480 528.9 433.3 507.3 396L502 386.9C493.2 371.6 498.4 352 513.7 343.2zM115 299.4L87.3 283.4C78.9 278.5 74.2 269.1 75.5 259.5C76.8 249.9 83.7 242 93.1 239.5L180.5 216C193.3 212.6 206.5 220.2 209.9 233L233.3 320.4C235.8 329.8 232.4 339.7 224.7 345.7C217 351.7 206.5 352.3 198.1 347.4L170.4 331.4L133.1 396C111.5 433.3 138.5 480 181.6 480L192.2 480C209.9 480 224.2 494.3 224.2 512C224.2 529.7 209.9 544 192.2 544L181.6 544C89.3 544 31.6 444 77.8 364L115 299.4z"
+                  />
+                </svg>
+              </div>
+              <div class="impact-card-content">
+                <h3 class="impact-card-title">Remediation Project</h3>
+                <p class="impact-card-desc">
+                  Full conversion of hazardous soil to reusable material with
+                  zero residual contamination.
+                </p>
+              </div>
+            </li>
+
+            <!-- Card 3 -->
+            <li
+              class="impact-card card-red reveal"
+              role="listitem"
+              aria-label="Zero emission pathways using sustainable refining technologies"
+            >
+              <div class="impact-card-icon">
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  focusable="false"
+                  aria-hidden="true"
+                  height="25"
+                  width="25"
+                >
+                  <path
+                    d="M128 128C128 110.3 113.7 96 96 96C78.3 96 64 110.3 64 128L64 464C64 508.2 99.8 544 144 544L544 544C561.7 544 576 529.7 576 512C576 494.3 561.7 480 544 480L144 480C135.2 480 128 472.8 128 464L128 128zM534.6 214.6C547.1 202.1 547.1 181.8 534.6 169.3C522.1 156.8 501.8 156.8 489.3 169.3L384 274.7L326.6 217.4C314.1 204.9 293.8 204.9 281.3 217.4L185.3 313.4C172.8 325.9 172.8 346.2 185.3 358.7C197.8 371.2 218.1 371.2 230.6 358.7L304 285.3L361.4 342.7C373.9 355.2 394.2 355.2 406.7 342.7L534.7 214.7z"
+                  />
+                </svg>
+              </div>
+              <div class="impact-card-content">
+                <h3 class="impact-card-title">Zero-Emission Pathways</h3>
+                <p class="impact-card-desc">
+                  Sustainable refining technologies with measurable
+                  environmental benefits.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- COLLAB CTA -->
+      <section
+        id="collab-cta"
+        class="section"
+        aria-labelledby="collab-cta-title"
+      >
+        <div class="container collab-cta-inner">
+          <h2 id="collab-cta-title">
+            Discuss a <span class="brand-accent">Collaboration</span>.
+          </h2>
+
+          <p class="collab-cta-intro">
+            We work with industrial operators, environmental partners, and
+            research institutions to develop sustainable recovery and refining
+            projects worldwide.
+          </p>
+
+          <div class="collab-cta-actions">
+            <a href="/contact/" class="cta-button sweep-to-top"
+              >Get in Touch with our Team</a
+            >
+          </div>
+
+          <div class="collab-cta-meta" aria-label="Contact information">
+            <p class="collab-cta-email">
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                focusable="false"
+                aria-hidden="true"
+                height="25"
+                width="25"
+              >
+                <path
+                  d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+                />
+              </svg>
+              <a href="mailto:info@onecyclegroup.com">info@onecyclegroup.com</a>
+            </p>
+
+            <p class="collab-cta-location">
+              Based in the United Kingdom – Operating Globally.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer1" class="section">
+      <div class="container footer1-inner">
+        <!-- Logo -->
+        <a href="/" class="nav1-logo">
+          <img
+            alt="OneCycle"
+            decoding="async"
+            srcset="/assets/images/onecycle-logo.webp"
+          />
+        </a>
+        <!-- Top Row -->
+        <div class="footer1-top">
+          <div class="footer1-brand">
+            <p class="footer1-tagline">
+              Turning hazardous materials into valuable resources.
+            </p>
+          </div>
+
+          <nav class="footer1-nav" aria-label="Footer Navigation">
+            <ul>
+              <li><a href="/">Home</a></li>
               <li><a href="/our-solutions/">Our Solutions</a></li>
               <li><a href="/about/">About</a></li>
               <li><a href="/contact/">Contact</a></li>
             </ul>
-            <div class="header-btn">
-              <a href="/contact/" class="cta-button">Get in Touch</a>
-            </div>
-          </div>
-        </nav>
+          </nav>
 
-        <div 
-          class="header-btn"
-          style="margin-left: 3rem;"
-          >
-          <a 
-            href="/contact/" 
-            class="cta-button sweep-to-top" 
-            style="padding: 0.7rem 1.5rem;"
+          <div class="footer1-contact">
+            <svg
+              class="icon-small footer1-email-icon"
+              viewBox="0 0 640 640"
+              aria-hidden="true"
             >
-            Get in Touch</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="nav1-overlay" id="nav-overlay" aria-hidden="true"></div>
-
-  <!-- Nav1 Component End -->
-  <!-- Nav1 Component End -->
-
-  <!-- Main Content -->
-  <main id="main-content" tabindex="-1">
-    <!-- HERO2 -->
-    <section id="hero2" class="section" aria-labelledby="hero2-title">
-      <div class="container hero2-inner">
-        <h1 id="hero2-title" class="hero2-title">
-          Turning Hazardous Materials into 
-          <span class="brand-accent-blue">Valuable Resources</span>
-        </h1>
-
-        <p class="hero2-lead">
-          Science-driven recovery and refining technologies that transform industrial by-products into sustainable value.
-        </p>
-
-        <p class="hero2-sub">
-          OneCycle develops advanced processes that convert hazardous waste into reusable materials, protecting the environment through precision, responsibility, and innovation.
-        </p>
-
-        <div class="hero2-actions" role="group" aria-label="Primary actions">
-          <a href="/our-solutions/" class="sweep-to-top cta-button">Learn About our Solutions</a>
-          <a href="/contact/" class="sweep-to-top cta-button sub-btn">Discuss a Collaboration</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGRESS SECTION -->
-    <section id="progress" class="section" aria-labelledby="progress-title">
-      <div class="container progress-inner">
-        <div class="progress-header">
-          <h2 id="progress-title">
-            Progress Through <span class="brand-accent">Precision.</span>
-          </h2>
-          <p class="progress-intro">
-            Each figure represents verifiable results achieved through
-            <span class="brand-accent">science and sustainability</span>.
-          </p>
-        </div>
-
-        <ul class="progress-grid">
-          <li class="progress-card reveal">
-            <p class="progress-figure">25+</p>
-            <p class="progress-copy">Years combined experience in sustainable materials recovery</p>
-          </li>
-
-          <li class="progress-card reveal">
-            <p class="progress-figure">90%+</p>
-            <p class="progress-copy">Reduction in hazardous waste achieved</p>
-          </li>
-
-          <li class="progress-card reveal">
-            <p class="progress-figure">Global</p>
-            <p class="progress-copy">Projects delivered across the UK and global sites</p>
-          </li>
-
-          <li class="progress-card reveal">
-            <p class="progress-figure">100%</p>
-            <p class="progress-copy">Proprietary low-emission refining systems</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SOLUTIONS SECTION -->
-    <section id="solutions" class="section" aria-labelledby="solutions-title">
-      <!-- Background Shapes -->
-      <div class="solutions-bg" aria-hidden="true">
-        <div class="solutions-circle circle1"></div>
-        <div class="solutions-circle circle2"></div>
-      </div>
-
-      <div class="container solutions-inner">
-        <div class="solutions-header">
-          <p class="solutions-subheading brand-accent">Our Solutions</p>
-          <h2 id="solutions-title">
-            Sustainable Recovery. <span class="brand-accent">Measurable Results.</span>
-          </h2>
-          <p class="solutions-intro">
-            Our technologies are built to extract value responsibly from hazardous residues to refined, reusable materials. 
-            Every solution is tailored, data-led, and aligned with circular economy principles.
-          </p>
-        </div>
-
-        <!-- Service Cards -->
-        <div class="solutions-grid">
-          <div class="solutions-card reveal">
-            <div class="icon-circle">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-              <path d="M259.1 73.5C262.1 58.7 275.2 48 290.4 48L350.2 48C365.4 48 378.5 58.7 381.5 73.5L396 143.5C410.1 149.5 423.3 157.2 435.3 166.3L503.1 143.8C517.5 139 533.3 145 540.9 158.2L570.8 210C578.4 223.2 575.7 239.8 564.3 249.9L511 297.3C511.9 304.7 512.3 312.3 512.3 320C512.3 327.7 511.8 335.3 511 342.7L564.4 390.2C575.8 400.3 578.4 417 570.9 430.1L541 481.9C533.4 495 517.6 501.1 503.2 496.3L435.4 473.8C423.3 482.9 410.1 490.5 396.1 496.6L381.7 566.5C378.6 581.4 365.5 592 350.4 592L290.6 592C275.4 592 262.3 581.3 259.3 566.5L244.9 496.6C230.8 490.6 217.7 482.9 205.6 473.8L137.5 496.3C123.1 501.1 107.3 495.1 99.7 481.9L69.8 430.1C62.2 416.9 64.9 400.3 76.3 390.2L129.7 342.7C128.8 335.3 128.4 327.7 128.4 320C128.4 312.3 128.9 304.7 129.7 297.3L76.3 249.8C64.9 239.7 62.3 223 69.8 209.9L99.7 158.1C107.3 144.9 123.1 138.9 137.5 143.7L205.3 166.2C217.4 157.1 230.6 149.5 244.6 143.4L259.1 73.5zM320.3 400C364.5 399.8 400.2 363.9 400 319.7C399.8 275.5 363.9 239.8 319.7 240C275.5 240.2 239.8 276.1 240 320.3C240.2 364.5 276.1 400.2 320.3 400z"/></svg>
-            </div>
-            <h3>Advanced Material Recovery</h3>
-            <p>Recovery of high-value elements from hazardous industrial by-products and residues using clean, data-driven technologies.</p>
-          </div>
-
-          <div class="solutions-card reveal">
-            <div class="icon-circle">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-              <path d="M384 64L224 64C206.3 64 192 78.3 192 96C192 113.7 206.3 128 224 128L224 279.5L103.5 490.3C98.6 499 96 508.7 96 518.7C96 550.4 121.6 576 153.3 576L486.7 576C518.3 576 544 550.4 544 518.7C544 508.7 541.4 498.9 536.5 490.3L416 279.5L416 128C433.7 128 448 113.7 448 96C448 78.3 433.7 64 416 64L384 64zM288 279.5L288 128L352 128L352 279.5C352 290.6 354.9 301.6 360.4 311.3L402 384L238 384L279.6 311.3C285.1 301.6 288 290.7 288 279.5z"/></svg>
-            </div>
-            <h3>Sustainable Refining Solutions</h3>
-            <p>Low-emission, high-efficiency refining methods tailored to client materials and compliance needs.</p>
-          </div>
-
-          <div class="solutions-card reveal">
-            <div class="icon-circle">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-              <path d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z"/>
-              </svg>
-            </div>
-            <h3>Environmental Remediation & Circular Projects</h3>
-            <p>Projects that turn hazardous materials into reusable assets and support restoration of land and water quality.</p>
-          </div>
-
-          <div class="solutions-card reveal">
-            <div class="icon-circle">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-              <path d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"/></svg>
-            </div>
-            <h3>R&amp;D in Clean-Technology Innovation</h3>
-            <p>Development of next-generation electrochemical and process technologies from concept through pilot scale.</p>
-          </div>
-        </div>
-
-        <!-- Supporting Capabilities -->
-        <div class="solutions-support reveal">
-          <h4>Supporting Capabilities</h4>
-          <ul>
-            <li>
-              <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="20" width="20">
-                <path d="M240 64C213.5 64 192 85.5 192 112L192 320C192 346.5 213.5 368 240 368L304 368C330.5 368 352 346.5 352 320L352 256L384 256C454.7 256 512 313.3 512 384C512 454.7 454.7 512 384 512L96 512C78.3 512 64 526.3 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 526.3 561.7 512 544 512L527.1 512C557.5 478 576 433.2 576 384C576 278 490 192 384 192L352 192L352 112C352 85.5 330.5 64 304 64L240 64zM184 416C170.7 416 160 426.7 160 440C160 453.3 170.7 464 184 464L360 464C373.3 464 384 453.3 384 440C384 426.7 373.3 416 360 416L184 416z"/>
-              </svg> Laboratory analysis &amp; process validation
-            </li>
-            <li>
-              <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="20" width="20">
-                <path d="M163.3 320.1L232.7 200.2C227.1 188 223.9 174.4 223.9 160C223.9 107 266.9 64 319.9 64C372.9 64 415.9 107 415.9 160C415.9 174.3 412.8 187.9 407.1 200.2L451.5 276.9C428.4 302.9 397.8 322 363.1 330.7L320 255.9L251.9 373.5C273.4 380.3 296.2 384 320 384C390.7 384 453.8 351.3 494.9 300C506 286.2 526.1 284 539.9 295C553.7 306 555.9 326.2 544.9 340C492.2 405.8 411 448 320.1 448C284.7 448 250.7 441.6 219.4 429.9L162.7 527.7C158 535.8 151 542.4 142.6 546.6L87.2 574.3C82.2 576.8 76.3 576.5 71.6 573.6C66.9 570.7 64 565.5 64 560L64 504.6C64 496.2 66.2 487.9 70.5 480.5L130.5 376.8C117.7 365.6 105.9 353.3 95.2 340C84.1 326.2 86.4 306.1 100.2 295C114 283.9 134.1 286.2 145.2 300C150.9 307.1 157 313.8 163.4 320.1zM445.1 471.9C477.6 458.9 507.5 440.9 534 419L569.6 480.5C573.8 487.8 576.1 496.1 576.1 504.6L576.1 560C576.1 565.5 573.2 570.7 568.5 573.6C563.8 576.5 557.9 576.8 552.9 574.3L497.5 546.6C489.1 542.4 482.1 535.8 477.4 527.7L445.1 471.9zM320 192C337.7 192 352 177.7 352 160C352 142.3 337.7 128 320 128C302.3 128 288 142.3 288 160C288 177.7 302.3 192 320 192z"/>
-              </svg> System design &amp; engineering support
-            </li>
-            <li>
-              <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="20" width="20">
-                <path d="M384 64C407.7 64 428.4 76.9 439.4 96L448 96C483.3 96 512 124.7 512 160L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 160C128 124.7 156.7 96 192 96L200.6 96C211.6 76.9 232.3 64 256 64L384 64zM410.9 276.6C400.2 268.8 385.2 271.2 377.4 281.9L291.8 399.6L265.3 372.2C256.1 362.7 240.9 362.4 231.4 371.6C221.9 380.8 221.6 396 230.8 405.5L277.2 453.5C282.1 458.6 289 461.3 296.1 460.8C303.2 460.3 309.7 456.7 313.9 451L416.2 310.1C424 299.4 421.6 284.4 410.9 276.6zM264 128C250.7 128 240 138.7 240 152C240 165.3 250.7 176 264 176L376 176C389.3 176 400 165.3 400 152C400 138.7 389.3 128 376 128L264 128z"/>
-              </svg> Consulting on sustainable technology, compliance, and circular economy integration</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHILOSOPHY SECTION -->
-    <section id="philosophy" class="section" aria-labelledby="philosophy-title">
-      <!-- Background shapes -->
-      <div class="philosophy-bg" aria-hidden="true">
-        <div class="philosophy-circle circle-left-1"></div>
-        <div class="philosophy-circle circle-left-2"></div>
-      </div>
-      <div class="container philosophy-inner">
-        <p class="philosophy-kicker reveal">Our Philosophy</p>
-
-        <h2 id="philosophy-title">
-          Where Science Meets <span class="brand-accent">Responsibility</span>.
-        </h2>
-
-        <p class="philosophy-copy">
-          We believe science and sustainability should work hand in hand. Every OneCycle process is designed to protect the
-          environment while unlocking new economic and material value.
-        </p>
-
-        <p class="philosophy-copy">
-          Our approach combines precision engineering with environmental stewardship. We operate quietly, focusing on
-          results, data, and long-term collaboration.
-        </p>
-
-        <p class="philosophy-tagline brand-accent">
-          Progress through precision. Sustainability through science.
-        </p>
-      </div>
-    </section>
-
-    <!-- IMPACT SECTION -->
-    <section id="impact" class="section" aria-labelledby="impact-title">
-      <div class="container impact-inner">
-        <header class="impact-header">
-          <h2 id="impact-title"><span class="brand-accent">Real-World</span> Impact.</h2>
-          <p class="impact-intro">
-            From reducing hazardous waste by over 90% to achieving zero-emission refining pathways, OneCycle’s work
-            demonstrates what responsible innovation can achieve.
-          </p>
-        </header>
-
-        <ul class="impact-grid" role="list">
-          <!-- Card 1 -->
-          <li class="impact-card card-blue reveal" role="listitem"
-              aria-label="Ninety five percent industrial metal residues recovery">
-            <div class="impact-card-content">
-              <p class="impact-card-figure">95%</p>
-              <h3 class="impact-card-title">Industrial Metal Residues Recovery</h3>
-              <p class="impact-card-desc">Material yield achieved through advanced extraction processes.</p>
-            </div>
-          </li>
-
-          <!-- Card 2 -->
-          <li class="impact-card card-slate reveal" role="listitem"
-              aria-label="Remediation project converting hazardous soil to reusable material with zero residual contamination">
-            <div class="impact-card-icon">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-                <path d="M216.3 124C262.5 44 378 44 424.2 124L461.5 188.6L489.2 172.6C497.6 167.7 508.1 168.4 515.8 174.3C523.5 180.2 526.9 190.2 524.4 199.6L500.9 287C497.5 299.8 484.3 307.4 471.5 304L384.1 280.6C374.7 278.1 367.8 270.2 366.5 260.6C365.2 251 369.9 241.5 378.3 236.7L406 220.7L368.7 156.1C347.1 118.8 293.3 118.8 271.7 156.1L266.4 165.2C257.6 180.5 238 185.7 222.7 176.9C207.4 168.1 202.2 148.5 211 133.1L216.3 124zM513.7 343.1C529 334.3 548.6 339.5 557.4 354.8L562.7 363.9C608.9 443.9 551.2 543.9 458.8 543.9L384.2 543.9L384.2 575.9C384.2 585.6 378.4 594.4 369.4 598.1C360.4 601.8 350.1 599.8 343.2 592.9L279.2 528.9C269.8 519.5 269.8 504.3 279.2 495L343.2 431C350.1 424.1 360.4 422.1 369.4 425.8C378.4 429.5 384.2 438.3 384.2 448L384.2 480L458.8 480C501.9 480 528.9 433.3 507.3 396L502 386.9C493.2 371.6 498.4 352 513.7 343.2zM115 299.4L87.3 283.4C78.9 278.5 74.2 269.1 75.5 259.5C76.8 249.9 83.7 242 93.1 239.5L180.5 216C193.3 212.6 206.5 220.2 209.9 233L233.3 320.4C235.8 329.8 232.4 339.7 224.7 345.7C217 351.7 206.5 352.3 198.1 347.4L170.4 331.4L133.1 396C111.5 433.3 138.5 480 181.6 480L192.2 480C209.9 480 224.2 494.3 224.2 512C224.2 529.7 209.9 544 192.2 544L181.6 544C89.3 544 31.6 444 77.8 364L115 299.4z"/>
-              </svg>
-            </div>
-            <div class="impact-card-content">
-              <h3 class="impact-card-title">Remediation Project</h3>
-              <p class="impact-card-desc">Full conversion of hazardous soil to reusable material with zero residual contamination.</p>
-            </div>
-          </li>
-
-          <!-- Card 3 -->
-          <li class="impact-card card-red reveal" role="listitem"
-              aria-label="Zero emission pathways using sustainable refining technologies">
-            <div class="impact-card-icon">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-                <path d="M128 128C128 110.3 113.7 96 96 96C78.3 96 64 110.3 64 128L64 464C64 508.2 99.8 544 144 544L544 544C561.7 544 576 529.7 576 512C576 494.3 561.7 480 544 480L144 480C135.2 480 128 472.8 128 464L128 128zM534.6 214.6C547.1 202.1 547.1 181.8 534.6 169.3C522.1 156.8 501.8 156.8 489.3 169.3L384 274.7L326.6 217.4C314.1 204.9 293.8 204.9 281.3 217.4L185.3 313.4C172.8 325.9 172.8 346.2 185.3 358.7C197.8 371.2 218.1 371.2 230.6 358.7L304 285.3L361.4 342.7C373.9 355.2 394.2 355.2 406.7 342.7L534.7 214.7z"/>
-              </svg>
-            </div>
-            <div class="impact-card-content">
-              <h3 class="impact-card-title">Zero-Emission Pathways</h3>
-              <p class="impact-card-desc">Sustainable refining technologies with measurable environmental benefits.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- COLLAB CTA -->
-    <section id="collab-cta" class="section" aria-labelledby="collab-cta-title">
-      <div class="container collab-cta-inner">
-        <h2 id="collab-cta-title">
-          Discuss a <span class="brand-accent">Collaboration</span>.
-        </h2>
-
-        <p class="collab-cta-intro">
-          We work with industrial operators, environmental partners, and research institutions to develop
-          sustainable recovery and refining projects worldwide.
-        </p>
-
-        <div class="collab-cta-actions">
-          <a href="/contact/" class="cta-button sweep-to-top">Get in Touch with our Team</a>
-        </div>
-
-        <div class="collab-cta-meta" aria-label="Contact information">
-          <p class="collab-cta-email">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" focusable="false" aria-hidden="true" height="25" width="25">
-              <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+              <path
+                d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+              />
             </svg>
+
             <a href="mailto:info@onecyclegroup.com">info@onecyclegroup.com</a>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="footer1-divider" />
+
+        <!-- Bottom Row -->
+        <div class="footer1-bottom">
+          <p class="footer1-copy">
+            © 2026 OneCycle. All rights reserved.
+            <a
+              href="https://builtbysemdev.com"
+              target="_blank"
+              class="built-by-link"
+              rel="noopener noreferrer"
+            >
+              This website was designed &amp; Built By SemDev.
+            </a>
           </p>
 
-          <p class="collab-cta-location">
-            Based in the United Kingdom – Operating Globally.
-          </p>
+          <div class="footer1-legal">
+            <a href="/privacy-policy">Privacy Policy</a>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
+    <!-- footer1 Components End -->
+    <!-- footer1 Components End -->
 
-  <!-- FOOTER -->
-  <footer id="footer1" class="section">
-    <div class="container footer1-inner">
-      <!-- Logo -->
-      <a href="/" class="nav1-logo">
-        <img alt="OneCycle" decoding="async"
-          srcset="/assets/images/onecycle-logo.webp">
-      </a>
-      <!-- Top Row -->
-      <div class="footer1-top">
-        <div class="footer1-brand">
-          <p class="footer1-tagline">
-            Turning hazardous materials into valuable resources.
-          </p>
-        </div>
-
-        <nav class="footer1-nav" aria-label="Footer Navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/our-solutions/">Our Solutions</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="footer1-contact">
-          <svg class="icon-small footer1-email-icon" viewBox="0 0 640 640" aria-hidden="true">
-            <path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
-          </svg>
-
-          <a href="mailto:info@onecyclegroup.com">info@onecyclegroup.com</a>
-        </div>
-      </div>
-
-      <!-- Divider -->
-      <hr class="footer1-divider">
-
-      <!-- Bottom Row -->
-      <div class="footer1-bottom">
-        <p class="footer1-copy">© 2026 OneCycle. All rights reserved.
-          <a href="https://builtbysemdev.com" target="_blank"
-           class="built-by-link" rel="noopener noreferrer">
-            This website was designed &amp; Built By SemDev.
-          </a>
-        </p>
-
-        <div class="footer1-legal">
-          <a href="/privacy-policy">Privacy Policy</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-  <!-- footer1 Components End -->
-  <!-- footer1 Components End -->
-
-  <script src="/assets/js/global.js" defer></script>
-</body>
+    <script src="/assets/js/global.js" defer></script>
+  </body>
 </html>
