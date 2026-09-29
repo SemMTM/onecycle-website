@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home -->
-  <url>
-    <loc>https://onecyclegroup.com/</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Core pages -->
-  <url><loc>https://onecyclegroup.com/our-solutions/</loc><lastmod>2026-01-08</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://onecyclegroup.com/about/</loc><lastmod>2026-01-08</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://onecyclegroup.com/contact/</loc><lastmod>2026-01-08</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://onecyclegroup.com/</loc></url>
+  <url><loc>https://onecyclegroup.com/our-solutions/</loc></url>
+  <url><loc>https://onecyclegroup.com/about/</loc></url>
+  <url><loc>https://onecyclegroup.com/contact/</loc></url>
+  <url><loc>https://onecyclegroup.com/privacy-policy/</loc></url>
 </urlset>

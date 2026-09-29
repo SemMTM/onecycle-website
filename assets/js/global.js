@@ -1,48 +1,160 @@
 (() => {
-  // ====== Nav Component Script Start ====== //
-  // ====== Nav Component Script Start ====== //
   const body = document.body;
-  const navToggle = document.querySelector('.nav1-toggle');
-  const navHeader = document.querySelector('#nav1-navigation');
-  const overlay = document.getElementById('nav-overlay');
+  const nav = document.querySelector('[data-nav]');
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const closeMainNav = () => { 
-    navToggle.classList.remove('active'); 
-    navHeader.classList.remove('nav1-active'); 
-    body.classList.remove('nav1-open'); 
-    navToggle.setAttribute('aria-expanded', 'false'); 
-    if (overlay) overlay.classList.remove('active'); 
-    // also close any open submenus when nav closes
-    document.querySelectorAll('.nav1-has-submenu.open').forEach((li) => closeItem(li)); // ADDED
+  const closeNavigation = () => {
+    if (!nav || !navToggle) return;
+    nav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
+    body.classList.remove('nav-open');
   };
-  
-  // Main Aria Nav Toggle
-  navToggle.addEventListener('click', () => {
-    const navAria = navToggle.getAttribute("aria-expanded");
-    navToggle.classList.toggle('active');
-    navHeader.classList.toggle('nav1-active');
-    body.classList.toggle('nav1-open');
-    navToggle.setAttribute(
-      "aria-expanded", navAria === "false" ? "true" : "false")
-    overlay.classList.toggle('active');
+
+  if (nav && navToggle) {
+    navToggle.addEventListener('click', () => {
+      const willOpen = navToggle.getAttribute('aria-expanded') === 'false';
+      nav.classList.toggle('is-open', willOpen);
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      navToggle.setAttribute('aria-label', willOpen ? 'Close navigation' : 'Open navigation');
+      body.classList.toggle('nav-open', willOpen);
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNavigation);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 850) closeNavigation();
+    });
+  }
+
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  accordionItems.forEach((item) => {
+    const activate = () => {
+      accordionItems.forEach((otherItem) => otherItem.classList.remove('is-active'));
+      item.classList.add('is-active');
+    };
+
+    item.addEventListener('mouseenter', activate);
+    item.addEventListener('focus', activate);
+    item.addEventListener('click', activate);
   });
 
-  if (overlay) { 
-    overlay.addEventListener('click', closeMainNav); 
+  const revealHeading = document.querySelector('[data-word-reveal]');
+
+  if (reduceMotion || !window.gsap || !window.ScrollTrigger) return;
+
+  if (revealHeading) {
+    const words = revealHeading.textContent.trim().split(/\s+/);
+    revealHeading.innerHTML = words.map((word) => `<span class="word">${word}</span>`).join(' ');
   }
-  // ====== Nav Component Script END ====== //
-  // ====== Nav Component Script END ====== //
 
-  const revealEls = document.querySelectorAll('.reveal');
+  gsap.registerPlugin(ScrollTrigger);
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  const heroContent = document.querySelectorAll('.hero-content > *');
+  if (heroContent.length) {
+    gsap.from(heroContent, {
+      y: 34,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.11,
+      ease: 'power3.out'
+    });
+  }
+
+  const heroOrbit = document.querySelector('.hero-orbit');
+  if (heroOrbit) {
+    gsap.from(heroOrbit, {
+      scale: 0.82,
+      opacity: 0,
+      duration: 1.35,
+      ease: 'power3.out'
+    });
+  }
+
+  const internalHero = document.querySelector('.internal-hero-layout');
+  if (internalHero) {
+    gsap.from(internalHero.children, {
+      y: 28,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.12,
+      ease: 'power3.out'
+    });
+  }
+
+  gsap.utils.toArray('.reveal').forEach((element) => {
+    gsap.from(element, {
+      y: 34,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 86%'
       }
     });
-  }, { threshold: 0.2 });
+  });
 
-  revealEls.forEach(el => observer.observe(el));
+  if (revealHeading) {
+    gsap.to(revealHeading.querySelectorAll('.word'), {
+      opacity: 1,
+      stagger: 0.08,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: revealHeading,
+        start: 'top 82%',
+        end: 'bottom 42%',
+        scrub: true
+      }
+    });
+  }
+
+  gsap.utils.toArray('.capability-panel').forEach((panel) => {
+    gsap.from(panel, {
+      y: 45,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: panel,
+        start: 'top 86%'
+      }
+    });
+  });
+
+  const processCards = gsap.utils.toArray('.process-card');
+  if (processCards.length && window.innerWidth > 820) {
+    processCards.forEach((card, index) => {
+      gsap.set(card, { transformOrigin: 'top center' });
+      if (index < processCards.length - 1) {
+        gsap.to(card, {
+          scale: 0.94 + index * 0.018,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: processCards[index + 1],
+            start: 'top 80%',
+            end: 'top 34%',
+            scrub: true
+          }
+        });
+      }
+    });
+  }
+
+  const impactItems = document.querySelectorAll('.impact-list article');
+  const impactLayout = document.querySelector('.impact-layout');
+  if (impactItems.length && impactLayout) {
+    gsap.from(impactItems, {
+      x: 40,
+      duration: 0.75,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: impactLayout,
+        start: 'top 78%'
+      }
+    });
+  }
 })();
