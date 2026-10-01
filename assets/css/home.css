@@ -222,8 +222,14 @@
   letter-spacing: -0.04em;
 }
 
+.js .thesis-statement.is-scrub-ready {
+  color: rgba(12, 17, 20, 0.18);
+}
+
 .thesis-statement .word {
+  display: inline-block;
   opacity: 1;
+  will-change: color;
 }
 
 .thesis-copy {
@@ -907,6 +913,7 @@
   }
 
   .thesis-statement .word {
+    color: var(--colour-ink);
     opacity: 1;
   }
 }

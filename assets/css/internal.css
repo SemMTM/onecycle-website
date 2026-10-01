@@ -42,6 +42,37 @@
   letter-spacing: -0.045em;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 var(--space-sm);
+  padding: 0;
+  color: var(--colour-ink);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.breadcrumbs li + li::before {
+  margin-right: 0.55rem;
+  color: var(--colour-cyan-deep);
+  content: "/";
+}
+
+.breadcrumbs a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: var(--colour-cyan-deep);
+}
+
 .internal-hero-copy {
   max-width: 43rem;
   color: var(--colour-muted);

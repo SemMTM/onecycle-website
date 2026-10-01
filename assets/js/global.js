@@ -49,6 +49,7 @@
   if (revealHeading) {
     const words = revealHeading.textContent.trim().split(/\s+/);
     revealHeading.innerHTML = words.map((word) => `<span class="word">${word}</span>`).join(' ');
+    revealHeading.classList.add('is-scrub-ready');
   }
 
   gsap.registerPlugin(ScrollTrigger);
@@ -100,12 +101,12 @@
 
   if (revealHeading) {
     gsap.to(revealHeading.querySelectorAll('.word'), {
-      opacity: 1,
+      color: '#0c1114',
       stagger: 0.08,
       ease: 'none',
       scrollTrigger: {
         trigger: revealHeading,
-        start: 'top 82%',
+        start: 'top 80%',
         end: 'bottom 42%',
         scrub: true
       }
