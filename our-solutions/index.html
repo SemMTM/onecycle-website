@@ -85,11 +85,17 @@
   </script>
   <link rel="icon" href="/assets/images/onecycle-favicon.png" type="image/png">
   <link rel="stylesheet" href="/assets/css/root.css?v=6">
-  <link rel="stylesheet" href="/assets/css/global.css?v=6">
-  <link rel="stylesheet" href="/assets/css/internal.css?v=7">
+  <link rel="stylesheet" href="/assets/css/global.css?v=7">
+  <link rel="stylesheet" href="/assets/css/internal.css?v=9">
 </head>
-<body>
+<body class="solutions-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="ph-flask" viewBox="0 0 256 256"><path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.74,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"/></symbol>
+    <symbol id="ph-blueprint" viewBox="0 0 256 256"><path d="M232,56H72V40a8,8,0,0,0-8-8H48A32,32,0,0,0,16,64V176a32,32,0,0,0,32,32H232a8,8,0,0,0,8-8V64A8,8,0,0,0,232,56ZM32,64A16,16,0,0,1,48,48h8v96H48a31.82,31.82,0,0,0-16,4.29ZM224,192H48a16,16,0,0,1,0-32H64a8,8,0,0,0,8-8V72H224ZM104,136a8,8,0,0,0,0,16h16v8a8,8,0,0,0,16,0v-8h24v8a8,8,0,0,0,16,0v-8h16a8,8,0,0,0,0-16H176V120h16a8,8,0,0,0,0-16H176V96a8,8,0,0,0-16,0v8H136V96a8,8,0,0,0-16,0v8H104a8,8,0,0,0,0,16h16v16Zm32-16h24v16H136Z"/></symbol>
+    <symbol id="ph-cube-focus" viewBox="0 0 256 256"><path d="M232,48V88a8,8,0,0,1-16,0V56H184a8,8,0,0,1,0-16h40A8,8,0,0,1,232,48ZM72,200H40V168a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16Zm152-40a8,8,0,0,0-8,8v32H184a8,8,0,0,0,0,16h40a8,8,0,0,0,8-8V168A8,8,0,0,0,224,160ZM32,96a8,8,0,0,0,8-8V56H72a8,8,0,0,0,0-16H32a8,8,0,0,0-8,8V88A8,8,0,0,0,32,96ZM188,167l-56,32a8,8,0,0,1-7.94,0L68,167A8,8,0,0,1,64,160V96a8,8,0,0,1,4-7l56-32a8,8,0,0,1,7.94,0l56,32a8,8,0,0,1,4,7v64A8,8,0,0,1,188,167ZM88.12,96,128,118.79,167.88,96,128,73.21ZM80,155.36l40,22.85V132.64L80,109.79Zm96,0V109.79l-40,22.85v45.57Z"/></symbol>
+    <symbol id="ph-compass-tool" viewBox="0 0 256 256"><path d="M215.12,123.64a8,8,0,1,0-14.24-7.28,79.58,79.58,0,0,1-33.08,33.5l-16.58-37.32A40,40,0,0,0,136,40.8V24a8,8,0,0,0-16,0V40.8a40,40,0,0,0-15.22,71.74L56.69,220.75a8,8,0,1,0,14.62,6.5l25.14-56.56A95.48,95.48,0,0,0,128,176a99.13,99.13,0,0,0,31.6-5.21l25.09,56.46a8,8,0,0,0,14.62-6.5l-25-56.25A95.81,95.81,0,0,0,215.12,123.64ZM128,56a24,24,0,1,1-24,24A24,24,0,0,1,128,56Zm0,104a79.52,79.52,0,0,1-25-4l16.42-36.94a39.81,39.81,0,0,0,17.2,0l16.48,37.06A83.21,83.21,0,0,1,128,160Z"/></symbol>
+  </svg>
   <header class="site-header">
     <div class="container nav-shell">
       <a class="brand-link" href="/" aria-label="OneCycle home"><img src="/assets/images/onecycle-logo.webp" alt="OneCycle"></a>
@@ -108,7 +114,6 @@
 
   <main id="main-content" class="internal-main">
     <section class="internal-hero">
-      <div class="orb-cluster hero-orbs" aria-hidden="true"><span class="orb orb-blue"></span><span class="orb orb-red"></span></div>
       <div class="container internal-hero-layout">
         <div>
           <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/">Home</a></li><li aria-current="page">Our solutions</li></ol></nav>
@@ -123,7 +128,6 @@
     </section>
 
     <section class="section">
-      <div class="ambient-orbs ambient-orbs-right" aria-hidden="true"><span class="ambient-orb ambient-orb-blue"></span><span class="ambient-orb ambient-orb-red"></span></div>
       <div class="container intro-grid">
         <p class="rule-label">Built for measurable impact</p>
         <div class="intro-copy">
@@ -140,7 +144,7 @@
         <div class="capability-list">
           <article class="capability-row reveal">
             <span class="capability-index">01</span>
-            <h3>Advanced material recovery <span>Recovering value from industrial waste.</span></h3>
+            <h3>Advanced material recovery <span>Recovery from complex industrial residues.</span></h3>
             <div class="capability-body">
               <p>We extract and repurpose high-value materials from complex residues using clean, science-driven recovery processes. Each system is engineered to maximise environmental impact reduction while maximising material yield and resource circularity.</p>
               <ul class="feature-list">
@@ -152,7 +156,7 @@
           </article>
           <article class="capability-row reveal">
             <span class="capability-index">02</span>
-            <h3>Sustainable refining solutions <span>Low-emission refining for a cleaner future.</span></h3>
+            <h3>Sustainable refining solutions <span>Lower-emission processing aligned to material and purity requirements.</span></h3>
             <div class="capability-body">
               <p>Our refining technologies optimise yield and purity while reducing emissions, energy use and waste. Each solution is tailored to the materials, operational requirements and regulatory environment of the project.</p>
               <ul class="feature-list">
@@ -164,7 +168,7 @@
           </article>
           <article class="capability-row reveal">
             <span class="capability-index">03</span>
-            <h3>Environmental remediation <span>Restoring environments. Creating value.</span></h3>
+            <h3>Environmental remediation <span>Treatment pathways for hazardous materials and affected sites.</span></h3>
             <div class="capability-body">
               <p>We transform hazardous materials into reusable assets while supporting the restoration of affected land and water. The result is a practical route from legacy liability to circular value.</p>
               <ul class="feature-list">
@@ -176,7 +180,7 @@
           </article>
           <article class="capability-row reveal">
             <span class="capability-index">04</span>
-            <h3>Clean-technology R&amp;D <span>Innovation through science.</span></h3>
+            <h3>Clean-technology R&amp;D <span>Process development from concept through pilot validation.</span></h3>
             <div class="capability-body">
               <p>From concept to pilot scale, we develop electrochemical and material-processing technologies with collaboration, precision and scalability built into every stage.</p>
               <ul class="feature-list">
@@ -196,10 +200,10 @@
         <span class="eyebrow">Specialised support</span>
         <h2 class="section-title" id="support-title">Technical depth from first sample to deployment.</h2>
         <div class="support-grid">
-          <article class="support-card"><span class="card-number">01 / Analysis</span><h3>Laboratory analysis &amp; process validation</h3><p>Material testing, data validation and process verification for accuracy, safety and consistency.</p></article>
-          <article class="support-card"><span class="card-number">02 / Engineering</span><h3>System design &amp; engineering support</h3><p>Bespoke system and reactor design from early feasibility through to implementation.</p></article>
-          <article class="support-card"><span class="card-number">03 / Characterisation</span><h3>Material characterisation &amp; sampling</h3><p>Detailed assessment to determine recovery potential and the right treatment pathway.</p></article>
-          <article class="support-card"><span class="card-number">04 / Advisory</span><h3>Consulting &amp; technical advisory</h3><p>Guidance on technology deployment, regulation and circular-economy opportunities.</p></article>
+          <article class="support-card"><div class="support-card-top"><span class="card-number">01 / Analysis</span><svg class="support-card-icon" aria-hidden="true" focusable="false"><use href="#ph-flask"></use></svg></div><h3>Laboratory analysis &amp; process validation</h3><p>Material testing, data validation and process verification for accuracy, safety and consistency.</p></article>
+          <article class="support-card"><div class="support-card-top"><span class="card-number">02 / Engineering</span><svg class="support-card-icon" aria-hidden="true" focusable="false"><use href="#ph-blueprint"></use></svg></div><h3>System design &amp; engineering support</h3><p>Bespoke system and reactor design from early feasibility through to implementation.</p></article>
+          <article class="support-card"><div class="support-card-top"><span class="card-number">03 / Characterisation</span><svg class="support-card-icon" aria-hidden="true" focusable="false"><use href="#ph-cube-focus"></use></svg></div><h3>Material characterisation &amp; sampling</h3><p>Detailed assessment to determine recovery potential and the right treatment pathway.</p></article>
+          <article class="support-card"><div class="support-card-top"><span class="card-number">04 / Advisory</span><svg class="support-card-icon" aria-hidden="true" focusable="false"><use href="#ph-compass-tool"></use></svg></div><h3>Consulting &amp; technical advisory</h3><p>Guidance on technology deployment, regulation and circular-economy opportunities.</p></article>
         </div>
       </div>
     </section>

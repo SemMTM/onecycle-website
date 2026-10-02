@@ -30,18 +30,6 @@
     });
   }
 
-  const accordionItems = document.querySelectorAll('.accordion-item');
-  accordionItems.forEach((item) => {
-    const activate = () => {
-      accordionItems.forEach((otherItem) => otherItem.classList.remove('is-active'));
-      item.classList.add('is-active');
-    };
-
-    item.addEventListener('mouseenter', activate);
-    item.addEventListener('focus', activate);
-    item.addEventListener('click', activate);
-  });
-
   const revealHeading = document.querySelector('[data-word-reveal]');
 
   if (reduceMotion || !window.gsap || !window.ScrollTrigger) return;
@@ -113,44 +101,27 @@
     });
   }
 
-  gsap.utils.toArray('.capability-panel').forEach((panel) => {
-    gsap.from(panel, {
-      y: 45,
+  gsap.utils.toArray('.service-row').forEach((row) => {
+    gsap.from(row, {
+      y: 24,
+      opacity: 0,
       duration: 0.8,
       ease: 'power3.out',
       scrollTrigger: {
-        trigger: panel,
+        trigger: row,
         start: 'top 86%'
       }
     });
   });
 
-  const processCards = gsap.utils.toArray('.process-card');
-  if (processCards.length && window.innerWidth > 820) {
-    processCards.forEach((card, index) => {
-      gsap.set(card, { transformOrigin: 'top center' });
-      if (index < processCards.length - 1) {
-        gsap.to(card, {
-          scale: 0.94 + index * 0.018,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: processCards[index + 1],
-            start: 'top 80%',
-            end: 'top 34%',
-            scrub: true
-          }
-        });
-      }
-    });
-  }
-
-  const impactItems = document.querySelectorAll('.impact-list article');
-  const impactLayout = document.querySelector('.impact-layout');
+  const impactItems = document.querySelectorAll('.impact-grid article');
+  const impactLayout = document.querySelector('.impact-grid');
   if (impactItems.length && impactLayout) {
     gsap.from(impactItems, {
-      x: 40,
+      y: 24,
+      opacity: 0,
       duration: 0.75,
-      stagger: 0.12,
+      stagger: 0.08,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: impactLayout,

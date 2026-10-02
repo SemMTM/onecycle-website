@@ -9,8 +9,11 @@
   align-items: end;
   overflow: hidden;
   padding: clamp(10rem, 17vw, 14rem) 0 clamp(5rem, 10vw, 8rem);
-  background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.98) 0 56%, rgba(234, 248, 251, 0.78) 100%);
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.98) 0 56%,
+    rgba(234, 248, 251, 0.78) 100%
+  );
   border-bottom: 1px solid var(--colour-line);
 }
 
@@ -22,7 +25,9 @@
   aspect-ratio: 1;
   border: 1px solid rgba(21, 150, 178, 0.18);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 5rem rgba(51, 199, 230, 0.03), inset 0 0 0 10rem rgba(196, 36, 36, 0.025);
+  box-shadow:
+    inset 0 0 0 5rem rgba(51, 199, 230, 0.03),
+    inset 0 0 0 10rem rgba(196, 36, 36, 0.025);
   content: "";
 }
 
@@ -206,7 +211,6 @@
 }
 
 .capability-row h3 {
-  max-width: 15ch;
   font-size: clamp(1.65rem, 2.5vw, 2.6rem);
   letter-spacing: -0.025em;
 }
@@ -628,6 +632,314 @@
   color: #fff;
 }
 
+/* =========================
+   OUR SOLUTIONS — LIGHT SYSTEM
+========================= */
+.solutions-page .icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.solutions-page .site-header .brand-link {
+  width: clamp(7.75rem, 11vw, 10rem);
+  padding-block: 0.35rem;
+}
+
+.solutions-page .internal-hero::after {
+  top: clamp(-7rem, -10vw, -3rem);
+  right: clamp(-9rem, -6vw, -3.5rem);
+  bottom: auto;
+}
+
+.solutions-page .internal-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.55rem, 4.2vw, 4.4rem);
+}
+
+.solutions-page .section-title,
+.solutions-page .page-cta h2 {
+  font-size: clamp(1.9rem, 2.8vw, 3.2rem);
+}
+
+.solutions-page .section-surface {
+  background: #f3f6f7;
+}
+
+.solutions-page .capability-row {
+  padding-block: clamp(2rem, 3.8vw, 3.3rem);
+}
+
+.solutions-page .capability-row h3 {
+  font-size: clamp(1.35rem, 1.7vw, 1.8rem);
+}
+
+.solutions-page .capability-row h3 span {
+  max-width: 34ch;
+  color: var(--colour-cyan-deep);
+}
+
+.solutions-page .section-dark {
+  background: var(--colour-paper);
+  color: var(--colour-ink);
+}
+
+.solutions-page .section-dark .section-copy,
+.solutions-page .section-dark .body-copy,
+.solutions-page .support-card p {
+  color: var(--colour-ink);
+}
+
+.solutions-page .section-dark .eyebrow,
+.solutions-page .support-card .card-number {
+  color: var(--colour-cyan-deep);
+}
+
+.solutions-page .support-grid {
+  border-color: var(--colour-line);
+}
+
+.solutions-page .support-card {
+  min-height: 15rem;
+  border-color: var(--colour-line);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.solutions-page .support-card:nth-child(2),
+.solutions-page .support-card:nth-child(3) {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.solutions-page .support-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.solutions-page .support-card-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--colour-cyan-deep);
+  fill: currentColor;
+}
+
+.solutions-page .support-card h3 {
+  max-width: 22ch;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.35rem, 1.8vw, 1.8rem);
+}
+
+.solutions-page .ambient-orbs {
+  width: clamp(9rem, 15vw, 14rem);
+}
+
+.solutions-page .ambient-orbs-right {
+  right: clamp(-6rem, -4vw, -3rem);
+}
+
+.solutions-page .ambient-orbs-left {
+  left: clamp(-6rem, -4vw, -3rem);
+}
+
+.solutions-page .ambient-orbs .ambient-orb-blue {
+  top: 0;
+  bottom: auto;
+  width: 78%;
+  aspect-ratio: 1;
+}
+
+.solutions-page .ambient-orbs .ambient-orb-red {
+  bottom: 5%;
+  width: 46%;
+}
+
+.solutions-page .ambient-orbs-right .ambient-orb-blue {
+  right: 0;
+  left: auto;
+}
+
+.solutions-page .ambient-orbs-right .ambient-orb-red {
+  right: auto;
+  left: 8%;
+}
+
+.solutions-page .ambient-orbs-left .ambient-orb-blue {
+  right: auto;
+  left: 0;
+}
+
+.solutions-page .ambient-orbs-left .ambient-orb-red {
+  right: 8%;
+  left: auto;
+}
+
+.solutions-page .orb-cluster {
+  width: clamp(10rem, 18vw, 17rem);
+}
+
+.solutions-page .orb-cluster.hero-orbs {
+  top: 20%;
+  right: -4%;
+}
+
+.solutions-page .orb-cluster .orb-blue {
+  inset: 0 0 auto auto;
+  width: 78%;
+  aspect-ratio: 1;
+}
+
+.solutions-page .orb-cluster .orb-red {
+  right: auto;
+  bottom: 5%;
+  left: 8%;
+  width: 46%;
+}
+
+.solutions-page .page-cta {
+  border-top: 1px solid var(--colour-line);
+  background: #eceff1;
+}
+
+.solutions-page .page-cta::before,
+.solutions-page .page-cta::after {
+  display: none;
+}
+
+/* =========================
+   REFINED INTERNAL PAGES
+========================= */
+.refined-page .site-header .brand-link {
+  width: clamp(7.75rem, 11vw, 10rem);
+  padding-block: 0.35rem;
+}
+
+.refined-page .internal-hero {
+  min-height: min(40rem, 78vh);
+  background: linear-gradient(115deg, #fff 0 66%, #f3f6f7 100%);
+}
+
+.contact-page .internal-hero,
+.policy-page .internal-hero {
+  min-height: min(35rem, 68vh);
+}
+
+.refined-page .internal-hero::after {
+  top: clamp(-7rem, -10vw, -3rem);
+  right: clamp(-9rem, -6vw, -3.5rem);
+  bottom: auto;
+  border-color: rgba(7, 116, 140, 0.14);
+  box-shadow:
+    inset 0 0 0 5rem rgba(7, 116, 140, 0.025),
+    inset 0 0 0 10rem rgba(23, 28, 31, 0.018);
+}
+
+.refined-page .internal-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.45rem, 4.1vw, 4.25rem);
+}
+
+.refined-page .section-title,
+.refined-page .statement,
+.refined-page .page-cta h2,
+.refined-page .contact-aside h2 {
+  font-size: clamp(1.9rem, 2.8vw, 3.15rem);
+}
+
+.about-page .section-dark {
+  border-block: 1px solid var(--colour-line);
+  background: #f3f6f7;
+  color: var(--colour-ink);
+}
+
+.about-page .section-dark .body-copy,
+.about-page .principle-card p,
+.about-page .metric p,
+.contact-page .form-note,
+.policy-page .policy-content p,
+.policy-page .policy-content li,
+.policy-page .policy-aside p {
+  color: var(--colour-ink);
+}
+
+.about-page .section-dark .eyebrow {
+  color: var(--colour-cyan-deep);
+}
+
+.about-page .principles-grid {
+  border-color: var(--colour-line);
+}
+
+.about-page .principle-card,
+.about-page .principle-card:nth-child(2),
+.about-page .principle-card:nth-child(3) {
+  min-height: 13.5rem;
+  border-color: var(--colour-line);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.about-page .principle-card h3 {
+  margin-top: clamp(2rem, 3.5vw, 3.25rem);
+  font-size: clamp(1.35rem, 1.8vw, 1.8rem);
+}
+
+.about-page .metric-strip {
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.refined-page .page-cta {
+  border-top: 1px solid var(--colour-line);
+  background: #eceff1;
+}
+
+.refined-page .page-cta::before,
+.refined-page .page-cta::after {
+  display: none;
+}
+
+.contact-page .section {
+  background: #f3f6f7;
+}
+
+.contact-page .contact-aside h2 {
+  max-width: 13ch;
+}
+
+.contact-page .contact-form {
+  border-color: #cbd2d5;
+  background: #fff;
+}
+
+.policy-page .policy-content {
+  padding-bottom: var(--space-md);
+}
+
+.status-shell .status-page {
+  min-height: 100dvh;
+  border-top: 1px solid var(--colour-line);
+  background: #f3f6f7;
+}
+
+.status-shell .status-card {
+  max-width: 48rem;
+  padding-left: clamp(1.25rem, 3vw, 2.5rem);
+  border-left: 1px solid var(--colour-ink);
+}
+
+.status-shell .status-code {
+  color: var(--colour-cyan-deep);
+}
+
+.status-shell .status-card h1 {
+  max-width: 13ch;
+  font-size: clamp(2.45rem, 4.6vw, 4.4rem);
+}
+
+.status-shell .status-card p {
+  color: var(--colour-ink);
+}
+
 @media (max-width: 850px) {
   .internal-hero {
     min-height: auto;
@@ -662,6 +974,10 @@
   .policy-aside {
     position: static;
   }
+
+  .solutions-page .support-card {
+    min-height: 13rem;
+  }
 }
 
 @media (max-width: 620px) {
@@ -695,5 +1011,38 @@
 
   .field-full {
     grid-column: auto;
+  }
+
+  .solutions-page .internal-hero h1 {
+    font-size: clamp(2.3rem, 11vw, 3.25rem);
+  }
+
+  .solutions-page .support-card {
+    min-height: 0;
+  }
+
+  .solutions-page .support-card h3 {
+    margin-top: 1.75rem;
+  }
+
+  .solutions-page .ambient-orbs {
+    width: 11rem;
+  }
+
+  .refined-page .internal-hero h1,
+  .status-shell .status-card h1 {
+    font-size: clamp(2.2rem, 10vw, 3.1rem);
+  }
+
+  .refined-page .internal-hero {
+    padding-top: 8.5rem;
+  }
+
+  .about-page .principle-card {
+    min-height: 0;
+  }
+
+  .about-page .principle-card h3 {
+    margin-top: 1.75rem;
   }
 }
